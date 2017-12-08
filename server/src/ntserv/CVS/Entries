@@ -1,0 +1,25 @@
+/Makefile.in/1.7/Thu Feb  3 19:18:25 2000//
+/cluecheck.c/1.6/Mon Jan 24 20:46:02 2000//
+/death.c/1.6/Wed Apr  5 16:43:25 2000//
+/fatudp.c/1.6/Mon Jan 24 20:46:02 2000//
+/feature.c/1.6/Wed Mar 22 00:37:01 2000//
+/findslot.c/1.6/Mon Jan 24 20:46:02 2000//
+/gameconf.c/1.6/Mon Jan 24 23:05:43 2000//
+/getentry.c/1.7/Thu Feb  3 19:18:25 2000//
+/getname.c/1.8/Tue Jan 25 20:15:29 2000//
+/input.c/1.6/Fri Feb  4 22:28:58 2000//
+/main.c/1.10/Wed Jul 18 08:07:07 2007//
+/message.c/1.9/Wed Apr 26 08:54:28 2000//
+/missile.c/1.4/Mon Jan 24 20:46:02 2000//
+/packets.c/1.5/Mon Jan 24 20:46:02 2000//
+/parsexbm.c/1.4/Mon Jan 24 20:46:02 2000//
+/ping.c/1.5/Mon Jan 24 20:46:02 2000//
+/plasma.c/1.4/Mon Jan 24 20:46:02 2000//
+/redraw.c/1.7/Fri Jan 28 07:15:32 2000//
+/reserved.c/1.1/Thu Feb  3 19:18:25 2000//
+/rsa-server.c/1.1/Thu Feb  3 19:18:25 2000//
+/socket.c/1.11/Fri Mar 24 23:55:18 2000//
+/sockio.c/1.8/Fri Feb  4 22:28:58 2000//
+/timecheck.c/1.4/Fri Jan 14 23:20:50 2000//
+/warning.c/1.5/Mon Jan 24 20:52:57 2000//
+D

@@ -1,0 +1,968 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <TITLE>Paradise Primer</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#00ff00" VLINK="#c8c864">
+
+<H1>
+<em>A Paradise Netrek Primer</em></H1>
+
+<H3>(Gameplay Basics)</H3>
+
+<ol>
+<li>
+<B><em>Objective of the game</em></B>
+	<BR>The objective of Paradise Netrek is to take over all
+	the other team's planets. To do this, you must fight space
+	battles to get kills, beam up your own armies, beam down
+	armies to enemy planets, and develop planets.
+
+<li>
+<B><em>Starting up the game</em></B>
+	<BR>The first thing you should see after you start the
+	game should be the <em>metaserver window</em>. This window
+	lists all the servers that are currently available for
+	play. Select a server that says <em>Paradise</em> next to
+	it, otherwise you'll end up playing just plain Netrek.
+
+<P>
+	Once you select a server, a screen should come up asking
+	you for a name and password. Select an alias for yourself
+	to use for your name. Or, if this is your first time
+	playing and you're kind of nervous about trying to blast
+	someone into oblivion, type <b>guest</b> for your name to
+	just sample Paradise. If you want to know who the server
+	gods are/have been: </p>
+
+<table border=1 align=center>
+<tr>
+<td>Alias</td><td>Server God</td><td>Server</td></tr>
+
+<tr>
+<th>Boscoe</th><td>          Jeffrey Watts</td><td> lark.cc.ukans.edu, paradise-lost.kulua.org</td></tR>
+<tr>
+<th>Hobbes</th><td>          R Kaut</td><td> hp06.ee.ualberta.ca</td></tR>
+<tr>
+<th>Kearsarge</th><td>       Eric Dorman</td><td> tanya.ucsd.edu</td></tR>
+
+<tr>
+<td colspan=3> Alumni:</td></tr>
+
+<tr>
+<th>Lynx</th><td>            Brandon Gillespie</td><td> pippin.ece.usu.edu</td></tR>
+<tr>
+<th>a fungusamongus</th><td> Larry Denys</td><td> pippin.ece.usu.edu</td></tR>
+<tr>
+<th>Bubbles</th><td>         Kurt Olsen</td><td> pippin.ece.usu.edu</td></tR>
+<tr>
+<th>Hammor</th><td>          Rob Forsman</td><td> netrek.cis.ufl.edu</td></tR>
+<tr>
+<th>Key</th><td>             Heath Kehoe</td><td> aedile.icaen.uiowa.edu</td></tR>
+<tr>
+<th>Kaos</th><td>            Mike McGrath</td><td> eden.tanya.ucsd.edu</td></tR>
+<tr>
+<th>MacCleod</th><td>        David Putzolu</td><td> cassius.cs.uiuc.edu</td></tR>
+<tr>
+<th>Gjor/Slider</th><td>     Ken Germann</td><td> skypoint.pnetrek.org</td></tR>
+<tr>
+<th>Brazilian</th><td>       Bob Glamm</td><td> skypoint.pnetrek.org</td></tR>
+<tr>
+<th>Data</th><td>            S.D. Franks</td><td> field-of-dreams.mit.edu</td></tR>
+
+</table>
+
+(All you other server gods <b>send me your name, alias, and server !!!</b>).
+
+<P>
+	Ok, so you've entered your name and password. Now, you
+	should take a few seconds to look at the screen on the
+	right hand side. Up near the top of the screen there
+	should be four different teams you can pick from -
+	Romulan, Federation, Klingon, and Orion. Directly right of
+	the teams is the countdown timer; this timer counts down
+	while you're idle. If you're idle for too long, the game
+	quits. If you need more time, check out the
+<A HREF="info/tourney-queue.html">Tournament Queue</A> that
+	is built into every Paradise server. </p>
+
+<P>
+	Directly underneath the teams is a list of server
+	parameters. Don't worry if you don't understand them all
+	yet; you won't need to. Of primary importance is the ship
+	list at the top of that section. Putting your mouse cursor
+	into the Fed, Rom, Kli, or Ori boxes at the top of the
+	window and typing a letter corresponding to the ship that
+	you want to use will put you into the middle of the
+	current game with that type of ship. </p>
+
+<P>
+	Another thing of great importance is the planet limit.
+	Check down the list of server parameters to see what the
+	planet limit is; typically it is anywhere between 14 and
+	25, usually 17. This means that the combined planets ruled
+	by your team and the opposing team can only add up to 17.
+	Note that some servers have no planet limits. Take away!!
+	</p>
+
+<P>
+	Now, the left side of the window shows the copyright and
+	whatever the message of the day is. This isn't too
+	important yet, so go ahead and select a ship on the right
+	side of the screen, or, take a look at the
+<A HREF="images/client-layout.gif">Hammor's window layout</A>
+	for reference in the upcoming descriptions. (Editor: I
+	need some more <strong>actual screenshots</strong> with
+	wormholes and the rainbowdashboard and perhaps just
+	another layout, to show the flexibility) </p>
+
+<li>
+<B><em>Basic ship descriptions</em></B>
+	<BR>Each ship is equipped with a few
+<A HREF="info/shipsystems.html"><b>basic systems</b></A>. Review
+	these first; the next section provides a general summary
+	for each ship type (and hey, if you want to know why they
+	are in such lame order, I just took them right out of the
+	server code. Deal with it. There is also a
+<A HREF="images/ships.gif">picture of all the ships for each
+	race</A> that you can refer to while reading the
+	descriptions):
+
+<dl>
+<dt>
+<B>SCOUT (SC) </B></dt>
+	<dd>The favorite ship of the Brazilian because of its high
+	maneuverability and low warp-entry time. That, and he can
+	smack up battleships with it. :) Small, fast,
+	maneuverable. Doesn't carry much fuel or weaponry, but can
+	scan planets from distances (most other ships have to
+	orbit a planet to find out what's on it).</dd>
+
+<dt>
+<B>DESTROYER (DD)</B>
+	<dd>Lightweight, agile fighter. Packs a punch, and under a
+	skilled pilot, can easily take out a battleship. It's not
+	much good for attacks on bases, though, but it's low
+	warp-prep time and high warp velocities make it a good
+	tool for carrying armies around.</dd>
+
+<dt>
+<B>CRUISER (CA)</B></dt>
+	<dd>Medium ship. This ship is about average in every
+	category. Average weapons, average turning and speed,
+	average army carrying capacity. This is the default ship
+	unless you've changed that in your .xtrekrc.</dd>
+
+<dt>
+<B>BATTLESHIP (BB)</B></dt>
+	<dd>Heavy ship. This ship can't turn very well or go
+	anywhere real fast, but if you're looking to get rid of
+	that pesky enemy near your home planet or take out the
+	enemy base, this is the ship that has the power to solve
+	your problem. One of the two primary base killing
+	ships.</dd>
+
+<dt>
+<B>ASSAULT (AS)</B></dt>
+	<dd>Another heavy ship. Basically a big army transport
+	with good damage capacity. It's tractors/pressors aren't
+	worth much, but it's torps can do some serious damage if
+	used effectively. Mostly used for transporting armies
+	around, because this ship can carry three armies per kill
+	instead of two.</dd>
+
+<dt>
+<B>STARBASE (SB)</B></dt>
+	<dd>This is the mother of all bases. This ship generally
+	does planetary defense for two or three planets, as well
+	as storehouse armies (up to 25 can be on board). Plasmas,
+	missiles, killer phasers and torps make this a dangerous
+	enemy to contend with one on one. The construction rate of
+	resources is improved by orbitting starbases.</dd>
+
+<dt>
+<B>AT&amp;T (AT)</B></dt>
+	<dd>If you see this ship, forget it. Wait until it blows
+	you up and don't approach the ship again. It's unlikely
+	that you'll ever get to use this ship; it's usage is the
+	province of Gods and Emperors. (this holds true for the
+	default setup. However, some servers use just the image,
+	but otherwise it <b>is</b> a killable ship. Probably it's
+	used to extend the range of ships power to the
+	<em>more</em>-side)</dd>
+
+<dt>
+<B>JUMPSHIP (JS)    </B><A HREF="howtos/JS-howto.html">See BioHazard's Hints on How To Ride a JS</A></dt>
+	<dd>This is a flying engine. With the highest warp speeds,
+	nothing else will come close to catching it. Don't
+	dogfight with it, though; it's phasers and torps can be
+	sneezed at. Doesn't take too much damage, either. However,
+	it's tractor/pressor range and strength can make this ship
+	a real annoyance to the enemy, as well as its four docking
+	ports that allow you to carry your ships to take planets
+	or ogg.</dd>
+
+<dt>
+<B>FRIGATE (FR)</B></dt>
+	<dd>Cousin to the battleship. Another heavy ship, slightly
+	faster and a bit less powerful than the battleship.
+	Another ship of choice when attacking bases.</dd>
+
+<dt>
+<B>WARBASE (WB)</B></dt>
+	<dd>The starbase's younger brother. Generally more
+	maneuverable than a starbase, it comes with the same array
+	of weaponry, but it's not as thick-skinned as the
+	starbase. It can't carry armies, either. It can defend at
+	the beginning of a game or bomb the enemy to smithereens,
+	though.</dd>
+
+<dt>
+<B>LIGHT CRUISER (CL)</B></dt>
+	<dd>This ship and a DD are a matchup. The light cruiser is
+	not much different that the DD; it's a little faster, but
+	can carry fewer armies. It is typically equipped with
+	destroyer-power afterburners.</dd>
+
+<dt>
+<B>CARRIER (CV)</B></dt>
+	<dd>Not found on all servers, this ship is a slow
+	planetary defense or base attack ship. It can beam up
+	armies and use them as fighters, each which fires a
+	torpedo at the enemy they are directed at. It's slow speed
+	makes this ship a sitting duck when attacked, though.</dd>
+
+<dt>
+<B>UTILITY (UT)   </B><A HREF="howtos/UT-howto.html">Green Death gives hints on how to drive a UT</A></dt>
+	<dd>Not found on all servers, this ship carries PTs on
+	board. This ship makes an effective weapon against a base
+	if played right (with swarms of consort PTs). Left alone,
+	it's pretty useless.</dd>
+
+<dt>
+<B>PATROL (PT)</B></dt>
+	<dd>Small, fast, not much in the way of army carrying,
+	torps, or phasers, but my oh my, those default missiles
+	pack a huge punch. Six PT missiles will kill a battleship,
+	but watch out so that you don't get tractored and
+	phasered</dd>
+</dl>
+<br>
+
+<li>
+<B><em>Controlling your ship</em></B>
+	<BR>So now you've selected a ship, and you're sitting
+	staring at the left side of the window, going, "Wow, I've
+	got my own ship..." Well stop staring and do something!
+	Here's a quick rundown of the essential keys that you'll
+	need to start out with:
+
+	<P>(<b>1-9</b>): Controls impulse speeds. Certain speeds
+	are good for certain ships. Generally, 4 is about right
+	for BBs, 6 for DDs. The rest you have to find out by from
+	experience. </p>
+
+	<P><b>Left mouse button</b>: Fire a photon torpedo. This
+	fires one shot of a primary offensive weapon toward the
+	cursor. Be forewarned, photons wobble in flight. </p>
+
+	<P><b>Middle mouse button</b>: Fire phasers. This fires
+	one phaser shot to the spot directly underneath the
+	cursor. If there's a ship there, you hit it. If not,
+	you're spewing out energy into empty space. Try again.
+	Note that all weapons have limited ranges, and this one is
+	no exception. </p>
+
+	<P><b>Right mouse button</b>: Turn ship. This makes your
+	ship turn toward the cursor. Nothing else special about
+	it. </p>
+
+	<P>(<b>s</b>): Raise/lower the shields. Shields use fuel
+	while they are up, so lowering them may conserve fuel.
+	Beware a sneak attack, though. </p>
+
+	<P>(<b>z</b>): Beam up armies from a friendly planet. You
+	need at least 0.5 kills to beam up armies. </p>
+
+	<P>(<b>x</b>): Beam down armies to a friendly or an enemy
+	planet. Watch out for the 'Sorry, there are already xx
+	planets in play' warning and enemy attackers! </p>
+
+	<P>(<b>t</b>): Tractor beam. Opponent got out of the way
+	of your carefully laid torp stream? Swing him around back
+	into it with the handy dandy tractor beams. Even useful
+	for swinging your enemy into stars. Watch out; your enemy
+	might use the same tactic on you. </p>
+
+	<P>(<b>Y</b>): Pressor beam. Uh oh, you're directly in the
+	enemy's torp path and out of fuel. Apply your pressor
+	beams to him and dodge out of the way! Then call for help.
+	</p>
+
+	<p>(<b>h</b>): Help Window. This is the place to find out
+	what all the other keys on your keyboard do (and almost
+	everyone does something ;). </p>
+
+	<P>Dashboard: This isn't a key, but shows your status. It
+	shows bars corresponding to how much fuel, shields, hull,
+	speed, and armies you have. The fuller the bar, the less
+	fuel, shields, hull, and the more speed &amp; armies you
+	have. Once your hull hits 0, you're dead. Once your fuel
+	runs to 0, you stop. Once your shields hit 0, you start
+	taking hull damage. It's pretty much self-obvious from
+	there on. </p>
+
+<li>
+<B><em>Sending messages and the Cluecheck</em></B>
+	<BR>Ok, you're wandering around the galaxy, doing serious
+	harm to the enemy, when suddenly you notice that there is
+	<b>TEXT</b> scrolling in a window down toward the bottom
+	of the screen. Out of curiosity, you read some of it.
+	Cryptic messages flash by, like
+<pre>F5->FED Ogg R2</pre> or
+<pre>F5->ALL Geez, that player 6 doesn't know what the heck he's doing</pre>
+	or... WAIT A MINUTE! YOU'RE PLAYER 6! Boy are you mad at
+	player 5 now...
+
+	<P>You've a few choice words for player 5, but how do you
+	send messages to someone else or to groups of people? Ok,
+	if you want to type, hit '<b>m</b>'. This gets you into
+	message mode. Now, select a destination for your message.
+	If you want to tell player '5' that he is a butthead, type
+	<b>5</b> at this point. If you want to alert your own team
+	to the enemy's presence, hit '<b>T</b>' at this point.
+	Other teams may be selected by the first letter of their
+	race - '<b>F</b>' for Fed, '<b>R</b>' for Rom, '<b>K</b>'
+	for Kli, and '<b>O</b>' for Ori. Or, if you just want to
+	trash talk in front of everyone, try the '<b>A</b>' key to
+	send it to all. </p>
+
+	<P>Now that you've selected a person or group to send it
+	to, type your message. It might not all fit on one line,
+	so you might have to send a couple of lines. After you're
+	done typing the message, hit 'Return' to send it out. </p>
+
+	<P>You can also send a message to yourself. This is
+	required when the server god has a <B>cluecheck</B> in
+	effect. You will be required to send yourself a test
+	phrase in order to stay in the game. </p>
+
+<H3>
+THE MESSAGE BOARD IS IMPORTANT</h3><BR>
+<h2>
+THE MESSAGE BOARD IS <em>*VERY*</em> IMPORTANT</H2>
+	The above is a not too subtle hint about the message
+	board. Why? Because sending and receiving messages is the
+	heart of teamwork. Teamwork is the heart of winning a game
+	and watching your opponents suffer a miserable defeat. You
+	do want to win, don't you?
+	<br> Then:
+
+<H1>
+READ THE MESSAGE BOARD AND CONTRIBUTE YOUR OBSERVATIONS.</H1>
+	Things such as telling people which enemy is carrying
+	armies, where the enemy base is, what enemy planets to
+	bomb, which planet you're carrying armies to, sending
+	distress signals if you have 8 armies and are almost dead;
+	these are good things to broadcast to people.
+
+<H3>
+THE MESSAGE BOARD IS IMPORTANT</h3><BR>
+<h2>
+THE MESSAGE BOARD IS <em>*VERY*</em> IMPORTANT</H2>
+	Got it? I thought you would. Now go out and blast away!
+	Or, for a summary of messaging controls, see
+<A HREF="info/messaging.html">a complete description of
+	sending messages.</A>
+</ol>
+
+
+<H1>
+<A NAME="INTERMEDIATE"></A><em>Intermediate Paradise Netrek</em></H1>
+
+<h3>(The Brazilian's Guide to Playing Paradise)</h3>
+	<BR>Ok, now you've logged onto some servers, played around
+	with it a little bit, but you just don't know what to do!
+	Frustrating, right? Try out the Brazilian's tips &amp;
+	hints on what to do to help your team be victorious in
+	Paradise!
+
+<ol>
+<li>
+<DL>
+<DT>The Pre-game Warmup</DT>
+
+	<DD> Despite the simplicity of jumping into a game, it's
+	important to have things set up to your liking before the
+	game. The first thing you can do is remap your keys for
+	playing to a comfortable setting. For example, the
+	Brazilian's keyboard is set up like this (in his
+	~/.xtrekrc file):
+
+<PRE>        keymap: tTTtg--ghsshnddnjDDjv``v
+    </PRE>
+	Note that it takes something like tTTt to interchange the
+	function of two keys. In this, I've switched it so that
+	tractors are 't', entering warp is 'g', shields is 'h',
+	detting enemy torps is 'n', detting my torps is 'j', and
+	afterburners are 'v'. This makes almost all the functions
+	I need for playing the game fit perfectly under my left
+	hand.
+
+	<P>Another feature that the Brazilian takes advantage of
+	(besides lots of experience and superb phaser locking
+	skills) is to see everyone's tractors and pressors. He
+	enables this by this setting in his .xtrekrc file:</p>
+
+<PRE>        showAllTractorPressor: on
+    </PRE>
+	Finally, in order to save time typing, the Brazilian
+	defines his own macros. These send computed messages to
+	people with a total of two keystrokes - shift-X and the
+	letter of the macro he wants to send. For example, at the
+	beginning of the game, he uses the macro
+
+<PRE>        macro.b.T:      BOMB!  BOMB!  BOMB!  BOMB!  BOMB!  BOMB!
+    </PRE>
+	to tell people to get in an AS and bomb the enemy.
+
+	<P>You can help your cause a lot in Paradise by making use
+	of the .xtrekrc options and macros. Bill Dyess has written
+	up an excellent page on the
+<a href="info/xtrekrc.html">options</a> available for use in
+	your .xtrekrc file, as well as a comprehensive guide to
+<a href="info/macros.html">macro</a> definitions. </p>
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>Jobs Of the Game</DT>
+
+	<DD> Knowing what to do throughout the game is a must.
+	Idly sitting around in your DD or BB is a waste of your
+	team's most important resource -- YOU. Don't just sit
+	there, DO something! The tips below are basic jobs to do.
+	For a more complete reference, see the Tin Man's Guide to
+	Jobs in Netrek. Or, read Hammor's Quick Road to Clue. It
+	explains basic tactics and duties to the raw cadet. </DD>
+
+<ol>
+<li>
+<DL>
+<DT>
+The <b>game</b> has just <b>started</b>.</DT>
+
+	<DD> Well, this one's easy. Get yourself an AS and <b>bomb</b>
+	the enemy homeworlds. In Paradise, the most important
+	resources besides YOU are the armies. If your enemy
+	doesn't have any armies, he can't take planets (or win the
+	game).
+
+	<P>Alternatively, you may find some people attack the WB
+	that usually pops up at the beginning of a game. You may
+	find it very difficult to bomb the armies out from
+	underneath a tough WB. So, help the players out that are
+	trying to do this by getting a BB or a FR and attack the
+	WB while your teammates bomb his planet! </p>
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Your <b>base</b> is screaming for <b>help</b>.</DT>
+
+	<DD> This one is easy to see as well. If your base is
+	sending your team messages labeled with "DISTRESS" or
+	something equally obnoxious, and is doing it often, get
+	yourself a BB or an AS and <strong>DET ENEMY TORPS FOR YOUR BASE</strong>.
+	The more you det, the more you save your base and the
+	longer your base will be around protecting or holding
+	armies for you to win with.
+
+	<P>An somewhat important thing is to also fire at incoming
+	oggers for your base. Your base can only fire so many
+	plasmas, torps, and phasers, and while your base may be
+	good enough to hit with most of them, a well-synced ogg
+	may result in more ships coming through than he can
+	handle. So, help your base out and fire at those enemy
+	ships to destroy them. </p>
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+You have no idea where all the planets are.</DT>
+
+	<DD> shift-P toggles the planet display. If your team's
+	number of planets and the opposing team's number of
+	planets don't add up to 17, you don't know where all the
+	enemy's planets are (and maybe secret stashes of armies).
+	Get into an SC and warp around the galaxy trying to find
+	them. If you find armies on enemy planets at this stage,
+	bomb them all off with your SC. It's a tough little bird.
+	</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Your team is behind in planets and your SB has lots of armies.</DT>
+
+	<DD> Another easy one. Get into your favorite
+	planet-taking ship (usually an AS, CL, DD, or SC), get a
+	kill, and start taking planets with armies from your SB.
+	If you need hints on this, watch KL - 1. His method of
+	planet taking just can't be beaten. </DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Your team is winning and your team has plenty of people taking.</DT>
+
+<DD>
+	Escort! While this may be one of the more unrewarding jobs
+	in Paradise, this needs to be done. Volunteer your
+	assistance as an escort in a DD, CL, CA, FR, or BB to your
+	team. Hopefully one of your takers will call for your help
+	in clearing a planet of enemies or defending against enemy
+	oggers as your teammate takes the planet. </DD>
+
+</DL>
+</ol>
+
+</dl>
+
+<li>
+<dl>
+<DT>
+The Post-game Cooldown</DT>
+
+	<DD> Just sit back and relax. Your team has won! Check and
+	see how many planets you've taken and how many enemy
+	armies you have destroyed! </DD>
+</DL>
+</ol>
+
+<H1>
+<A NAME="ADVANCED"></A>Advanced Paradise Netrek</H1>
+
+<h3>(The Brazilian's Special Forces / Special Tactics Guide)</h3>
+
+	<P>So, you want to have your name feared throughout the
+	Netrek galaxies? You want to have your name up there along
+	with KL - 1, RICKER, and the Brazilian? Never! :) But if
+	you want to try, here are some of the things that the
+	Brazilian has picked up on... </p>
+
+<ol>
+<li>
+<DL>
+<DT>
+Photons, Phasers, Plasmas, Missiles, Tractors, and Pressors</DT>
+
+	<DD> While these are the fundamental elements of
+	dogfighting in the game, it is important to understand
+	completely how these work. Your understanding will make
+	you a better player. </DD>
+
+<ol>
+<li>
+<DL>
+<DT>
+Photon Torpedoes</DT>
+
+	<DD> The fundamental weapon in Paradise. You can fire
+	eight of these at a time. Their fuel and weapon temp cost
+	is fairly low, meaning you can fire a lot of these without
+	running out of either too quickly. If you're fighting
+	someone that doesn't dogfight very well, you can generally
+	spit out a straight stream of 8-16 torps and get yourself
+	another flag painted on your ship. If you're fighting
+	someone that twists and turns and is <b>hard to hit</b>, you're
+	going to have to fire a <b>spread</b> of them, and guess where
+	they are going.
+
+	<P>Photon strength also varies with ship type. Bases and
+	BBs have the strongest torps. PTs and SCs have the
+	weakest. To become effective, you must learn to kill even
+	the biggest ships with the smallest ones, and vice versa.
+	</p>
+
+	<P><b>You can hurt yourself with your own torpedoes!</b>
+	Getting too close to an enemy vessel will result in damage
+	to you from the torpedo explosions. The Brazilian has been
+	known to get burned by this on several occasions. </p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Phasers</DT>
+
+	<DD> The next fundamental weapon in Paradise. Generally
+	used much more often by the bases since they do more
+	close-in fighting. However, mastery of this weapon is
+	often the key factor between a successful Paradise player
+	and an average Paradise player. Every ship is equipped
+	with a phaser that can be fired around once per second,
+	depending on the ship. Unlike the photons, however, their
+	<b>damage decreases with increasing distance</b> (i.e., the
+	further away they are, the less damage you do to them).
+	Close in, they can often spell quick death for ships. At
+	point blank range, even an SC can mortally wound or kill
+	something as large as a BB. Also, since phasers don't
+	explode, a point-blank shot from a phaser will not cause
+	damage to your own ship.
+
+	<P>If you get good enough, you can hit cloakers with your
+	phaser locking skills. It's generally easiest to place
+	your cursor over the galactic map on top of where the
+	cloaker is and fire. If you lock, hit him over and over
+	again. If not, it's generally better to fire a photon
+	spread to find him. </p>
+
+	<P>Phaser energy is fairly costly due to its large damage
+	potential at close range. It also has a moderate weapon
+	temp cost. </p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Plasma Torpedoes</DT>
+
+	<DD> On standard Paradise servers, plasmas are only
+	available if you refit into another ship while having more
+	than two kills. Basically, plasmas are useless unless
+	you're in a heavy ship, like a BB, FR, or a base, because
+	plasmas on lighter ships do very little damage in relation
+	to the fuel and weapon temp they consume. Plasmas are just
+	like torps, except they <b>home in on ships a little
+	bit</b>. They do a fair amount of damage when they hit.
+	However, they <b>can also be phasered down by your
+	enemy</b>.
+
+	<P>Plasma lobbing is a difficult skill to learn. As a
+	base, lobbing plasmas is a fun thing to do, but watch out!
+	They consume a great deal of weapon temp. This weapon can
+	actually be used with high accuracy on cloaked oggers,
+	since it tracks just enough to hit incoming enemies in
+	warp. Generally, a well placed plasma and a couple of
+	short phaser shots will take out any type of enemy. If
+	they're running with shields down, the plasma will
+	completely destroy any ship it hits, except for an AS, WB,
+	SB, CV, or UT. Of course, if you're lobbing plasmas odds
+	are it's at enemy oggers, and people almost never come
+	screaming straight in with a WB, SB, CV, or UT to ogg a
+	base. It's the AS's that you have to be careful about.
+	</p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Missiles</DT>
+
+	<DD> A specialty weapon. Any ship can get these after 2.5
+	kills on standard Paradise servers. PTs come armed with
+	missiles automatically (i.e. they do not require any kills
+	to use on a PT). Normal ships are loaded with between 6
+	and 18 missiles by default, whereas bases get an infinite
+	number. Missiles on all ships but the PT are fairly slow
+	weapons. Missiles also have the property that they can
+	<b>home in even on cloaked players</b>.
+
+	<P>Missiles actually do a fair amount of damage for the
+	limited weapon temp and fuel they consume, if they hit.
+	Missiles can be detted by clued players for almost no
+	damage, though. </p>
+
+	<P>Special Brazilian note: It takes exactly 6 PT missile
+	hits to kill a fresh BB. </p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Tractors and Pressors</DT>
+
+	<DD> Learn how to use these! These are critical in
+	dogfighting, and even more so in bases. If you're ogging,
+	you can use these to drag a base off his repair planet or
+	to stop an enemy from entering warp on standard Paradise
+	servers. Or, drag the enemy into your nearly well-placed
+	photon stream to achieve a quick kill.
+
+	<P>Tractors and pressors can also be used for
+	non-agressive purposes as well. For example, you can push
+	the person you're escorting out of the way of an enemy
+	torp stream. As a base, <b>you can drag a wounded teammate
+	into safety behind you from enemy oggers</b>. As a JS, you can
+	use them to help your teammate take planets and to hold
+	off enemies. </p>
+
+	<P>Another special Brazilian note: If your enemy is using
+	a JS and some other ship to take planets, and the taker
+	doesn't cloak while docked on the JS, tractor the taker
+	off the JS (yes, this can even be done when the JS warps
+	by) and plaster the taker for an easy doosh. This causes
+	damage to the JS as well. </p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Summary</DT>
+
+	<DD> Photons: can fire up to 8 at once. Damage is constant
+	over their entire flight path, but dependent on ship type.
+	Light-moderate damage per photon. Low fuel and weapon temp
+	cost. <b>Can be detonated for less damage</b>. Cause
+	damage to yourself if you are too close to the target.
+
+	<P>Phasers: Can fire one burst about once per second.
+	Damage decreases with increasing range. Range and initial
+	damage varies per ship. Moderate fuel and weapon temp
+	cost. Cannot be detonated, but a fairly precise strike is
+	needed to hit an enemy. Do not cause damage to yourself,
+	even if you are directly on top of an enemy (although an
+	exploding ship resulting from your strike can damage you
+	considerably; best bet is to pressor, then shoot -
+	Jeffrey). </p>
+
+	<P>Plasmas: Can fire exactly one at once. Damage is
+	constant over entire flight path; but they are useless on
+	anything smaller than a FR or a BB. Heavy damage, but high
+	fuel and weapon temp cost. Cannot be detonated, but a
+	direct phaser strike will neutralize them. This weapon
+	tracks enemies slightly, even if cloaked. </p>
+
+	<P>Missiles: Can fire up to four at once (two on a PT) on
+	standard Paradise servers. Damage is constant over entire
+	flight range, and is dependent on ship type.
+	Moderate-heavy damage. Moderate-high fuel and weapon temp
+	cost. Can be detonated for little damage. This weapon
+	tracks enemies very well, even if cloaked. </p>
+
+	<P>Tractors and Pressors: Only one beam at once. Not
+	damaging, and range is dependent on ship type. Can be used
+	to yank enemies off of bases, or bases off of planets.
+	Does not work on cloaked players.
+</DD>
+</DL>
+
+</dl>
+</ol>
+
+
+
+<li>
+<dl>
+<DT>
+Basing</DT>
+
+	<DD> Having recently completed several 100+ kill games, I
+	feel free to speak on this subject as much as I want.
+
+	<P>First off, you're going to need some critical keys
+	under your fingers. Find the special weapons key, the
+	afterburner key, the shield key, the repair key, the
+	tractor key, the pressor key, the phaser button, and the
+	torp button. Next, zoom the galactic map (default:
+	&lt;Tab&gt; key) so you can see incoming oggers. Now
+	you're ready to base. </p>
+
+</DD>
+
+<ol>
+
+<li>
+<DL>
+<DT>
+Guarding or Building Planets</DT>
+
+	<DD> Your first priority is to guard the planet you're
+	sitting on. That means that any ship that comes in cloaked
+	or that is racing toward your planet in an AS must die!
+	Great, they're cloaked, so how do you pick them off? To
+	answer this, let's take a look at typical bombing
+	strategies:
+
+	<P>Most good players that go to bomb a planet do not come
+	straight in. They know that's a sure way to get picked
+	off, waste a ship, and give away a kill. They will come in
+	to the sides of the planet and go toward it after that.
+	</p>
+
+	<P>Also, the ones that can really bomb a planet clean
+	actually take several afterburner passes at the planet,
+	depending on how aware they think the defenders are. If
+	they think the defenders are sleeping, they'll afterburn
+	straight toward the planet. If they see torps and plasmas
+	flying everywhere, odds are there will be some serious
+	twisting and dodging, possibly multiple times, past the
+	planet before they enter orbit. </p>
+
+	So, now how do you pick them off? There are a few ways,
+	including:
+
+<OL>
+<LI>
+	Torp spreading. Spray torps through where the ships
+	normally orbit the planet to find where they are and pick
+	them off. Or, you can guess at where they are laying off
+	the planet cloaked; this will generally cause them to move
+	(if you guess well enough) and you can get a better idea
+	of where the phaser lock point is.
+
+<LI>
+	Phaser locking. Simple enough: try to guess where the
+	phaser lock is. If you've just hit them with a torp, it's
+	a lot easier to figure out. If you've got the galactic
+	zoomed (which you should have done, if you're a base), you
+	have a better than average chance of hitting them by
+	placing your cursor over their cloak symbols.
+
+<LI>
+	The waiting game. Generally not a good strategy for the
+	initial bomb phase of the game, this involves waiting for
+	the enemy players to settle down into orbit (or close to
+	it). Their maneuverability is then much reduced, as well
+	as their speed; it's easier to pick them off. This also
+	gives them a second or two of bomb time, but not enough to
+	do any real damage. Beware, though, if you miss, it can
+	send your resources skyward in a vapor cloud. This is why
+	it's not a good initial-game strategy; this allows your
+	enemies to gradually bomb off your armies. When you have a
+	SB, you can pick them up and don't have to worry about
+	them getting bombed off.
+
+<LI>
+	Missiles. Missiles track even cloaked players. The
+	Brazilian doesn't use missiles since the SB missiles track
+	too slowly to accurately determine an enemy player's
+	position on the map. He has also defeated bases using the
+	strategy repeatedly.
+
+</OL>
+</DD>
+</dl>
+
+<li>
+<dl>
+<dt>
+Building</dt>
+
+	<dd> The second most important thing besides space control
+	and army defense is building. Don't waste your time
+	building shipyards or repairs or fuels; these are bombed
+	off with frightening regularity by stat scummers. Build
+	AGRIs instead; they will produce many more armies and be
+	worth more than anything with a wrench or a gear on it.
+
+	<P>There is an exception to the no-shipyard rule, of
+	course. First, you may have to rebuild your homeworld's
+	shipyard if it got bombed off. Second, if you want to move
+	your entire armada closer to the enemy worlds, you will
+	want to build a forward shipyard where your teammates can
+	get to enemy lines faster and will be able to defend you
+	easier. Finally, you may want to build an alternative
+	shipyard for your teammates that isn't in the way of a
+	star or other large deadly object on the map. </p>
+
+</dd>
+</dl>
+
+<li>
+<dl>
+<DT>
+Picking Off Oggers.</DT>
+
+	<DD> Generally, if you see one or two oggers coming in,
+	lob a plasma or a few missiles in their general direction.
+	Note that most smart oggers will not come straight at you;
+	they will aim toward either side of you. The plasmas do
+	track slightly, so be aware of that as well. Now, if
+	you're getting ogged fairly heavily, hit that afterburner
+	key and head a fair distance from the planet (but watch
+	that etemp). If the oggers are cloaked, you can either
+	phaser a lot to try to pick them off, or you can wait
+	until they de-cloak. Since de-cloaking takes a few ticks,
+	you'll have a good second or two until they can throw
+	anything at you; torp and phaser them. If they are not
+	cloaked, just hit them with photons or phasers. Don't use
+	plasmas after the initial shot since they cost a lot in
+	weapon temp and will be shot down or avoided by a
+	reasonably good player.
+
+	<P>If there's more than you can handle, do the same
+	beginning steps as above, but don't hesitate to fire or
+	attempt phaserlock on any of them, even if they are
+	cloaked. Use a lot of afterburners (again, watch the
+	etemp). If you are starting to get slowed down, call for
+	help! You need at least one good teammate detting enemy
+	torps for you. Call for help if you wtemp too; generally,
+	though, if you wtemp, you should be able to hold them off
+	for long enough to get another few shots off. </p>
+
+</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+Support at LPS.</DT>
+
+	<DD> When you get your enemy down to his last planet, it
+	can be a very difficult take, especially if the defenders
+	are spraying a lot of torps everywhere. So take your base
+	in! Sync up with the takers, then approach the planet and
+	clear the planet of defenders (or cripple them) so your
+	taker can stroll in and drop his armies on the planet.
+	Special Brazilian Note: If you have a fast enough link to
+	the server, AND if you can get close enough to the last
+	planet to do this, you can pick off ships as they enter
+	the game before they can fire shots at you. How can you do
+	this? Well, first off, most people have a half-second
+	delay due to their normal reaction times. Second, there is
+	another half-second to five-second delay from the time a
+	person dies to the time they can get back into the game.
+	So, by torping and phasering a player immediately when you
+	see them enter, you can generally pick them off with only
+	minor or no damage. The other reason this can be done is
+	that they are stationary when they enter; since most
+	people can't drive and shoot at the same time, they have a
+	choice to make. If they run, phaser and torp them. If they
+	shoot at you, dodge, then phaser and torp. Most people
+	aren't bright enough to det their own missed torps either.
+	Also, if you have the other base right next to you, this
+	is a lot easier.
+</DD>
+</DL>
+
+</ol>
+
+</dl>
+</ol>
+
+<p>
+<A HREF="info/shipsystems.html"><b>Basic concepts overview</b></A>
+
+<HR>
+
+</BODY>
+</HTML>

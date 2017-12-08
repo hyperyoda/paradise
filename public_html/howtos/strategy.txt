@@ -1,0 +1,277 @@
+OPENING GAMBIT:
+
+  Everybody but our warbase bomb the enemy system.  Don't attempt to
+bomb planets defended by the enemy warbase.  If the enemy warbase
+abandons the homeworld, stoneage it.  We might not get another chance
+to bomb it as well.
+
+  Our warbase's job is to defend the homeworld.  If there is another
+planet within spitting distance (1/4 tactical screen) it will be
+worthwhile to defend, but if defending a planet takes you away from
+the homeworld, you should not attempt to defend it.
+
+  When all enemy planets but the SY are army flat, it's time to move
+to stage 2.
+
+STAGE 2 --- exploratory kidney punch:
+
+  Everyone makes one suicide ogg on the WB.  If this attack reveals
+the warbase is weak and unassisted, an ogg may be in order.  If we can
+destroy the enemy warbase, we have a BIG advantage in that it is much
+easier to bomb their shipyard.
+
+  If the warbase is found to be skilled then a cross-galaxy ogg
+attempt will likely be unsuccessful.
+
+STAGE 3 --- scouting:
+
+ AGRI oggers will proceed to ogg the enemy AGRI.  These players must
+be skilled at cloaked evasion.  Their job is to repeatedly suicide
+bomb the enemy shipyard/agri until it is completely stoneaged.  If the
+agri-ogger is wounded, he should choose to die by the base's hand
+rather than a normal enemy ship, because the ship could then carry
+armies.
+
+  All other players should proceed to play netrek.
+
+  If you have kills, carry armies.
+
+  If you don't have kills, scout ahead for the carriers.  Use a SC to
+scan planets in the middle of nowhere (quick, and scouts better).
+Cruisers should be used for planets in a contested area, they don't
+need to enter orbit, just fly through the planet.  They can also
+escort or ogg an incoming carrier.
+
+  The purpose of this stage is to gain a strategic overview of the
+galaxy.  We are looking for a Metal&Arable planet in the center of the
+galaxy, or a Metal near an Arable.
+
+  Carriers should proceed to take 2 neutral planets.  This adds to the
+original 5 to give us 7.  The WB can now refit to a BB and then to an
+SB.
+
+STAGE 4 --- playing netrek
+
+
+  If you have kills, carry.
+
+  If you don't, or have few kills relative to the rest of the team you
+can take on a number of roles.
+
+  + scouting.  Our intelligence gets out of date.  I have created a
+new set of bitmaps for the galactic that display scouting info age.  A
+solid planet needs to be scouted, a dithered one needs to be scouted
+in direct proportion to how solid it is.  Clear planets need not be
+scouted.
+
+  + ogg enemy carriers.  Any enemy who has kills can carry.  He needs
+to die.  You can either rush in and do a screaming ogg or you can
+anticipate his targets.  The best ship to ogg in is a DD.  It has good
+speed, and fairly good fuel regen.  Everything else sucks too much
+fuel or is too slow.  Remember that tractor beams abort warp.  The
+enemy can't escape if you are tractoring.  Ogg calmly.  Revenge is a
+dish best served cold.
+
+  + escort.  If one of our carriers is going someplace dangerous, he
+probably needs an escort.  If you know his destination you can arrange
+to get there first and do space control to hassle enemy oggers or
+defenders.  Get in FRONT of the planet so that they have to get
+through you.  Your life is not worth as much as the carrier's so don't
+be afraid to mutual if you can't outright defeat your opponent.
+
+  + bomb.  The enemy will build shipyards and agris.  This sometimes
+falls in with scouting except that a scout bombs poorly.  Your job is
+to stoneage nearby shipyards (far away ones should be left alone) and
+destroy ALL agri planets.  If the enemy has an ARABLE planet, you may
+want to go into orbit for 5 seconds and bomb.  This delays the
+construction of an agri and pisses off you opponents.
+
+  When flying around, avoid unnecessary dogfights with enemies who
+have no kills.  You might give him a kill and make him a carrier.
+
+
+  The job of the starbase, when it is alive, is to build facilities
+and collect armies.  The starbase will be sitting on the homeworld
+(assuming it didn't get bombed) and will collect armies that pop above
+35.  When it is full the starbase should warp off for that ideal
+planet in the center of the galaxy and beam its armies down to help
+the starbase build the SY and/or AGRI.
+
+  It is not important to defend backfield SY from bombing, but it is
+VITAL to protect them from being TAKEN.  If the enemy gets a shipyard
+in a place where we are vulnerable it should be stoneaged.
+
+  It is vitally important that your team control EVERY arable planet
+(except 3rd race).  If the enemy has an arable, he can have an agri,
+and due to the pop rate of agris it is near impossible to make a
+steady advance when the enemy has an agri.  It also doesn't hurt if
+your team has a million AGRI planets.  Just make sure that the enemy
+doesn't take one away from you.  Retake it, or if you can't, stoneage
+it.
+
+  Build facilities that give you a strategic advantage over the enemy.
+Build and defend a forward shipyard (but not too forward, they might
+ogg).
+
+
+
+ARMY MANAGEMENT:
+
+  If your team has only one AGRI, the starbase should be orbiting it
+and skimming armies.  Get armies from the starbase.  Do NOT beam the
+AGRI down below 35.  The more armies on an agri, the faster it will
+pop.  It's like eating your seed corn if you beam it below 30.
+
+  If the team has several agris, pick up from whichever one exceeds
+35.  If you have a backfield agri, it might be advantageous to have a
+carrier ferry to a forward location.
+
+  Don't carry more armies than you need to take one planet.  An
+exception is for VERY safe areas or if you just have way too many
+armies.  If you could encounter any sort of resistance, take just
+enough armies to leave the planet at 3 when you're done.
+
+  If your team has no spare armies, you should switch to ogging or
+bombing.  A kill should be easy to come by (your team probably has
+skilled dogfighters).
+
+OGG DEFENSE:
+
+  Starbase should use missiles to detect enemy cloakers.  Refrain from
+plasmas in a heated battle, you will wtemp.
+
+  If your starbase is being ogged and needs help, refit at the nearest
+shipyard to give yourself a good resurrection position.  Get BETWEEN
+the starbase and the enemy.  In this position you can gain free kills
+by giving speeding tickets, if they don't take a speeding ticket they
+will have to drop out of warp and drive THROUGH you to get to the
+starbase.  This buys him vital time.  The further the battle is from
+the starbase the more he can repair.
+
+  If the starbase is REALLY damaged, use AS ships to det enemy
+torpedoes.  The AS causes less damage than a BB when exploding and
+this is important if you are near your own starbase.
+
+OGG OFFENSE:
+
+  If you are going to attempt an ogg, make sure you have a nearby
+shipyard.  Refit there to give yourself a good resurrection position.  
+
+  Use the buddy system when ogging a base.  If you can head in cloaked
+at impulse with a friend, you can straddle the enemy base and decloak
+on opposite sides.  This gives him extra targets to deal with and lets
+more damage through.
+
+  If you are really good, you can do a syncronous screaming ogg
+(screaming ogg is when you warp in, dewarp at the right time to miss
+his torp stream and then ogg).  Don't forget when ogging to use
+tractors and phasers.  If you are REALLY close, you do a LOT of damage
+with phasers.  Don't hesitate to det your own torpedos if they're all
+going to miss.  This way you don't have to wait for them to die and
+you can use up your fuel shooting at him.  An ogger RARELY runs out of
+fuel unless he cloaks too long.
+
+  If you can det torpedos on the enemy base you have it SET!  His
+teammates are not too smart if they shoot torps over him and by
+detting them you cause him damage at VERY low fuel cost to you.  This
+works best when you are cloaked and alone.  Not many opponents are
+this stupid though :(
+
+  In the past it has been possible for two full-time ragged oggers to
+destroy a base, but it takes luck and a lack of support from the enemy
+team.  It's not likely to happen in a league game.
+
+STAGE 5 --- against the wall:
+
+  The enemy has you at a disadvantage.  You have no agri or are low on
+armies.  Your job is to CONSERVE armies.  If you have an agri, let it
+pop up to 25 or so before you start skimming.  This gives you a steady
+supply.
+
+  Bomb him.  Scout every nearby planet.  Any that belong to the enemy
+should be stoneaged.  ESPECIALLY the shipyard.  Scout all arable
+planets.  Any enemy agris should be flattened and stoneaged.  If he's
+so busy attacking your planets he won't be defending his own.  Once
+the enemy is strapped for armies you can begin your comeback.
+
+  A few defenders can defeat a similar number of attackers.  Don't
+have everybody orbiting the agri, it clutters the galactic.  If you
+have a warbase you're pretty well off.  He's got lots of fuel that he
+can give you.  Don't worry about saving your kills.  If they are
+REALLY trying to take your planets they will be dying in droves.  It
+is better to die and get a new ship than to survive and be useless
+while you refuel.
+
+STAGE 6 --- End Game:
+
+  When you have the enemy against the barrel, it is time to heat up
+the battle.  Hopefully he has few armies because he has few planets.
+You should make a point to destroy all facilities the enemy has.  If
+he has no shipyard he has to travel to a 3rd race planet to refit and
+his base (if he still has one) can not repair as quickly.
+
+  Target his AGRI planets to be taken.  It is VERY important for your
+team to get a nearby shipyard and it is even MORE important to make
+sure that the enemy doesn't get an AUXILIARY shipyard in your
+backfield.  Ignore his Toxic and Tainted planets.  You will LPS him
+there.
+
+  It is probably not best for the starbase to stay forward.  It could
+be ogged.  If you have enough players, put a WB near the front line to
+guard an army stockpile.  This stockpile will be used by EVERYONE who
+gets a kill.
+
+  If you don't have a kill your job is to either get one, or even
+better, assist someone who does.  Cloak in with them on a planet take
+and confuse the defenders.  Clear the planet if it isn't heavily
+defended.
+
+  If you DO have kills, carry. At this stage all you want to do is
+drop enough to take it.  Don't worry about revolt.  If you leave it at
+one, someone else might be able to reinforce it.  The important thing
+is to deny it to your enemy.
+
+  If all you can carry is 2, DO so.  Every time you weaken it, you
+make it easier for the next carrier to take.  You also reduce the
+number of armies they'll have if it pops.  You might even make it
+revolt.
+
+
+THINGS TO REMEMBER:
+
+  When you pick up armies, distress.  This way your teammates know
+who's carrying and who to defend.
+
+  If you are going to take a planet, call the target.  Someone might
+be able to help with space control or clearing.
+
+  If you are in trouble, distress.  Someone might be able to help you.
+If your ship is worthless they will probably ignore you and it is your
+duty to mutual with the enemy, but they might rescue your flea-bitten
+hide which gives ONE of you a kill.
+
+  Prevent revolts.  Leave at least 3 armies when you take.  Reinforce
+if the enemy has incited one by dropping on a weak planet.
+
+  Be aware of where your teammates are.  Ask yourself how you can help
+them with their job.
+
+  Don't have too many carriers.  If everybody is carrying then no one
+can escort.  The exception to this rule is during a multi-target
+blitz.  It's much harder for the enemy to kill 5 carriers at once, but
+it's fairly easy to kill them one at a time.  If you have only 1 kill
+and several people on your team have 2, pick a non-carrying job.
+
+  Don't ignore scouting.  If the enemy has a repair base you can
+discover it by scouting.  By subsequently bombing you can prevent an
+unwanted shipyard.  If the enemy has an agri you don't know about,
+he's got a secure source of armies.  These should be discovered and
+destroyed or taken.
+
+  Refit at your favorite shipyard.  The last shipyard you refit at is
+where you come in (unless it is no longer a shipyard).  This enables
+you to defend it better and get better starting position during an
+ogg.
+
+
+(Editor: Author unknown)

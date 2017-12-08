@@ -1,0 +1,79 @@
+Configure fails looking for libXpm on Red Hat 6.1 - ID: 203865
+Last Update: Comment added ( watts )
+Details:
+
+'configure' fails on Red Hat Linux 6.1 with all errata applied. I don't
+know enough about autoconf to figure out why it can't find this library. A
+simple patch that corrects this problem is:
+
+--- configure.orig Fri Jan 22 15:24:00 1999
++++ configure Thu Dec 30 04:41:34 1999
+@@ -7,6 +7,10 @@
+# This configure script is free software; the Free Software Foundation
+# gives unlimited permission to copy, distribute and modify it.
+
++# Added by Jeffrey Watts &lt;watts@jayhawks.net&gt; to get TT to build
+under
++# Red Hat GNU/Linux 6.1 (glibc2.1)
++LDFLAGS=-L/usr/X11R6/lib
++
+# Defaults:
+ac_help=
+ac_default_prefix=/usr/local
+
+Here's the error message that 'configure' spit out:
+
+checking for XpmCreatePixmapFromData in -lXpm... no
+
+*** Could not find XPM library (libXpm).
+*** Make sure that it is installed and set
+*** the LDFLAGS environment variable to point to it
+*** with -L(path) before re-running configure.
+Submitted:
+
+Jeffrey Watts ( watts ) - 2000-04-03 19:31
+Priority:
+
+5
+Status:
+
+Closed
+Resolution:
+
+Fixed
+Assigned:
+
+Bob Glamm
+Category:
+
+client
+Group:
+
+None
+Visibility:
+
+Public
+
+Comments ( 2 )
+Add a comment
+
+Monitor this artifact
+
+
+Date: 2000-04-10 03:31
+Sender: watts
+
+Bob, your fix does not solve the problem on RH 6.2. I get the same error
+message. I\'m using the current CVS (with your fixes included).
+
+
+Date: 2000-04-05 12:18
+Sender: glamm
+
+Few things:
+1) repository now has correct fix
+2) a patch modifying configure is useless because the next autoconf will
+just overwrite it anyway
+3) \'tail -25 config.log\' will usually explain the problem
+4) Adding ${X_LIBS} ${X_PRE_LIBS} ${X_EXTRA_LIBS} -lX11 as additional
+libraries to the AC_CHECK_LIB() for -lXpm fixes the problem.

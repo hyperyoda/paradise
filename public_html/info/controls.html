@@ -1,0 +1,314 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <TITLE>Self-Message Controls for Paradise</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000099" LINK="#00ff00" VLINK="#c8c864">
+
+<H1>
+How to Talk to Yourself</H1>
+
+	In regular paradise there are several features available
+	by sending messages to yourself. You can check the ship
+	rebuild timers, enter the tournament queue, reset your
+	keymap, and probably a few more that have been written
+	into the server since this document was composed. To
+	explore this system, send yourself the message
+	<TT>help</TT>.
+
+	<P>It's best to think of the control system as a set of
+	menus. Each level of the menu has a help entry that will
+	list all the other entries possible. Submenus will be have
+	<TT>...</TT> after them in a <TT>help</TT> list.
+
+	<P>To issue a command you send yourself a string of words
+	that navigate through the menu system. The message
+	``<TT>league time 90 30</TT>'' allows a captain to
+	configure the game for a 90 minute game with a 30 minute
+	overtime period. The message ``<TT>player password
+	coffee</TT>'' changes a player's password to
+	``coffee''.</p>
+
+<H1>
+Top Level Commands</H1>
+
+The following commands are available from the top level menu
+<DL>
+<DT>
+<TT>help</TT></DT>
+
+<DD>
+	Get a list of commands available from the top level
+	menu.</DD>
+
+<DT>
+<TT>control</TT>...</DT>
+
+<DD>
+	The god controls submenu. This is not available to normal
+	players.</DD>
+
+<DT>
+<TT>version</TT></DT>
+
+<DD>
+	Prints out the current server version.</DD>
+
+<DT>
+<A HREF="#player"><TT>player</TT>...</A></DT>
+
+<DD>
+	The player controls submenu.</DD>
+
+<DT>
+<A HREF="tourney-queue.html"><TT>queue<br>tq</TT></A></DT>
+
+<DD>
+	Enter the tournament queue so that you can wait for
+	tournament mode without worrying about being iconscummed
+	or iggied to death.</DD>
+
+<DT>
+<A HREF="#league"><TT>league</TT>...</A></DT>
+
+<DD>
+	The league controls submenu. This menu is only available
+	during league play.</DD>
+
+<DT>
+<A HREF="#information"><TT>information</TT>...</A></DT>
+
+<DD>
+	The information submenu. Miscellaneous bits of
+	configuration and state info that you can't easily obtain
+	otherwise.</DD>
+
+<DT>
+<TT><A HREF="observer.html">observe [%d]</A></TT></DT>
+
+<DD>
+	Signify that you do not want to fly a ship anymore. The
+	next time you die and reenter the game, you will be placed
+	in observer mode. If the argument is present and zero,
+	then you do NOT wish to observe anymore and you may
+	quit your observing and reenter the game flying a
+	ship again.</DD>
+
+<DT>
+<TT>parameters<br>params</TT></DT>
+
+<DD>
+	request that the game download certain parameters to your
+	client. This can include team logos and ship bitmaps. This
+	will be automatic in the future.</DD>
+
+</DL>
+
+<A NAME="player"></A>
+<H1>
+Player Controls</H1>
+
+	All player control commands begin with the word
+	``<TT>player</TT>''. The following subcommands are
+	available.
+
+<DL>
+<DT>
+<TT>help</TT></DT>
+
+<DD>
+	Gives a list of commands available under this menu.</DD>
+
+<DT>
+<TT>password</TT> %s</DT>
+
+<DD>
+	Changes your password to the string argument. You must
+	issue a duplicate request to confirm the change (not on
+	all servers).</DD>
+
+<DT>
+<TT>ratings</TT></DT>
+
+<DD>
+	Prints out your ratings. Since the client is often unaware
+	of new ratings computation methods, this is the only way
+	to <B>really</B> know what your ratings are.</DD>
+
+<DT>
+<TT>rank</TT></DT>
+
+<DD>
+	Prints out the requirements for the next rank. The client
+	has a set of built-in rank statistics that sometimes do
+	not match what the server has. To get the real scoop you
+	have to either download the game parameters or use this
+	command.</DD>
+
+</DL>
+
+
+<A NAME="information"></A>
+<H1>
+Information Submenu</H1>
+
+	All information requests start with the word
+	<TT>information</TT>. To get a list of commands, send
+	yourself the command ``<TT>information help</TT>''
+
+<DL>
+<DT>
+<TT>shiptimer</TT></DT>
+
+<DD>
+	Print a list of which ships have been destroyed and how
+	long before a new one will be available.</DD>
+
+</DL>
+
+
+<A NAME="league"></A>
+<H1>
+League Commands</H1>
+
+	All league commands start with the word <TT>league</TT>.
+	To get a list of commands, send yourself the command
+	``<TT>league help</TT>''
+
+<P>Commands available to the <b>user</b> include
+</p>
+
+<DL>
+<DT>
+<TT>help</TT></DT>
+
+<DD>
+	Get a list of commands available under the <TT>league</TT>
+	menu.</DD>
+
+<DT>
+<TT>captain</TT> [%d]</DT>
+
+<DD>
+	if there is no numeric argument, or the argument is
+	non-zero, and there's no captain already, you'll become
+	captain. If the argument is zero and you are currently
+	captain you will quit being captain.</DD>
+
+<DT>
+<TT>time</TT></DT>
+
+<DD>
+	Tells you how much time is left in league play.</DD>
+
+<DT>
+<TT>information</TT></DT>
+
+<DD>
+	Gives information about team names, empires and other
+	configuration info.</DD>
+
+<DT>
+<TT>maxplayer</TT></DT>
+
+<DD>
+	Inquire about the maximum number of players per team.</DD>
+
+</DL>
+
+	There are extra commands available to the <b>captain</b>
+	which allow him to <b>configure</b> the game.
+
+<DL>
+<DT>
+<TT>pass</TT></DT>
+
+<DD>
+	Pass the choice of empire to the other team.</DD>
+
+<DT>
+<TT>start</TT> [%d]</DT>
+
+<DD>
+	Signify that this team is ready to start, unless the
+	argument is present and zero, in which case you are
+	<B>not</B> ready to start.</DD>
+
+<DT>
+<TT>teamname</TT> %s</DT>
+
+<DD>
+	Set the name of your team.</DD>
+
+<DT>
+<TT>time</TT> %d %d</DT>
+
+<DD>
+	Set the length of the game. The first parameter is
+	regulation time, and the second is overtime. Both captains
+	must agree to change the length of the game.</DD>
+
+<DT>
+<TT>home</TT> %c</DT>
+
+<DD>
+	Force a teammate (the player specified by the argument)
+	onto the home team. This only works if you are captain of
+	the away team (Riker?).</DD>
+
+<DT>
+<TT>away</TT> %c</DT>
+
+<DD>
+	Force a teammate onto the away team. This only works if
+	you are captain of the home team.</DD>
+
+<DT>
+<TT>fed</TT></DT>
+<DT>
+<TT>rom</TT></DT>
+<DT>
+<TT>kli</TT></DT>
+<DT>
+<TT>ori</TT></DT>
+
+<DD>
+	Choose an empire for your team.</DD>
+
+<DT>
+<TT>galaxy</TT> [%d]</DT>
+
+<DD>
+	Ask for a galaxy reset. If the argument is present and
+	zero, then prevent a galaxy reset. Both captains must
+	agree to reset the galaxy.</DD>
+
+<DT>
+<TT>pause</TT></DT>
+
+<DD>
+	Request a pause during the game. Both captains must agree
+	to pause the game. If you decide you no longer want a
+	pause, use the continue command to change your mind before
+	the opposing captain pauses.</DD>
+
+<DT>
+<TT>continue</TT></DT>
+
+<DD>
+	Request that the game continue after a pause. Both
+	captains must agree to continue the game.</DD>
+
+<DT>
+<TT>maxplayer</TT> %d</DT>
+
+<DD>
+	Request a change in the maximum players per team. Both
+	captains must agree to change the maxplayers.</DD>
+
+</DL>
+
+<HR>
+
+</BODY>
+</HTML>

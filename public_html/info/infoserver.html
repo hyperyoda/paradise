@@ -1,0 +1,1301 @@
+<html>
+<head>
+<title>Welcome to Paradise</title>
+</head>
+
+<body>
+
+  This document was originally on recumbent's port 3000.  Some of this
+information has to be out of date, but a lot of it is still OK.
+Please send comments to the paradise-workers mailing-list, like
+corrections/addidions/deletions ...
+
+<HR>
+
+
+<h1>Old Paradise Hackers Hall-Of-Fame</h1>
+If you look in the code and see something you don't like,
+here are the people to blame :)
+<p>
+
+Bob Forsman 
+<br> Hammor
+<br> cis.ufl.edu@thoth
+<br> <b>client</b>, <b>server</b>, tools, <b>archivist</b>
+
+<p>
+
+Heath Kehoe
+<br> Key
+<br> icaen.uiowa.edu@hakehoe
+<br> <b>client</b>, <b>server</b>, <b>tools</b>
+
+<p>
+
+Bill Dyess
+<br> Thought
+<br> dyess.com@Bill
+<br> <b>client</b>, server
+
+<p>
+
+Mike McGrath
+<br> Kaos
+<br> maroon.tc.umn.edu@mcgrath
+<br> <b>client</b>, <b>server</b>, <b>wacky implementations</b>
+
+<p>
+
+Brandon Gillespie 
+<br> Lynx
+<br> cc.usu.edu@Brandon
+<br> <b>Creator</b>, <b>wacky ideas</b>
+
+<p>
+
+Heiji Horde
+<br> Kreelscum/KnightRaven
+<br> reed.edu@Horde
+<br> <b>mailing list</b>, <b>archivist</b>
+
+<p>
+
+<h2>Paradise Hacking Alumni</h2>
+
+Larry Denys
+<br> a fungusamoungus
+<br> paradise.declab.usu.edu@sl1yn
+<br> <b>Creator</b>
+
+<p>
+
+Kurt Olsen
+<br> Bubbles
+<br> cc.usu.edu@kurto
+<br> <b>Creator</b>
+
+<p>
+
+Ted Hadley
+<br> Pteryductyl
+
+<p>
+
+Mark Kolb
+
+<p>
+
+Mike Lutz
+<br> icaen.uiowa.edu@MikeL
+
+<hr>
+
+<h1>Paradise Clients</h1>
+
+ The latest client is 2.4.
+<p>
+  Clients can be retrieved from
+<tt>www-radiology.ucsd.edu</tt>
+in the directory
+<tt>/pub/paradise/bin</tt>
+as
+<tt>netrek.*</tt>
+.
+
+
+
+<h1>Mailing Lists</h1>
+
+There are quite a few mailing lists available.  All are <tt>@reed.edu</tt>
+and are quite dead.  RIP.
+
+<dl compact>
+<dt> <tt>paradise-workers</tt>	<dd> for discussing code changes.
+<dt> <tt>paradise</tt>		<dd> for discussing general paradise topics.
+<dt> <tt>paradise-league</tt>	<dd> for Paradise League Captains.
+<dt> <tt>paradise-announce</tt>	<dd> for announcements of major releases.
+</dl>
+
+<p>
+
+Send mail to <tt>paradise-request</tt> to get on|off a list
+(<b>not</b> to the list itself).  <B>!NOTE!</b> paradise-request is
+<b>not</b> a listserver.
+
+<p>
+
+<h1>Planets</h1>
+
+Planets are much more involved than in regular netrek.  They have an
+extra facility added to the called the shipyard, which is where you
+can enter at and refit your ships.  You can have multiple shipyards.
+There are also some astronomical bodies which are stars.  <b>Do not
+orbit or touch stars</b>.
+
+<h2>Revolts</h2>
+
+Planets may revolt if you leave less than 2 armies on them.  At 2 armies 
+the chances are about 50/50.  You will first get a warning, and the 
+armies will drop to 1 (they tried their best Praetor, but the 
+malcontents are just too strong!)  After 1, if no re-enforcements arrive, 
+it will become independent, with 1 army (and it will grow armies).
+
+<h2>Resources</h2>
+
+Resources are limited by the surface of the planet.  There are 3
+surface types: M (Metal) which will allow Shipyard/Repair, D
+(Dylithium) which will allow Fuel, and A (Arable) which will alow
+Agri.  The surface type also comes into play, when figuring army
+poppage, etc. (ie having an agri on a A D planet would be nice, but
+not as good as having one on a AM or A planet).
+
+<p>
+
+Resource Times (Growing), there are a bunch of other things which modify 
+this, so I will just post the raw number so that people can have an idea
+of how long it takes for each surface type:  FUEL = 100, AGRI = 350, 
+REPAIR = 150, SHIPYARD = 400.
+
+<h2>Tables/Matrices</h2>
+
+These Tables are the same tables in the server, which 
+control the Chance of a planet popping armies, the 
+maximum armies that type of planet can hold, and the 
+army multiplier when it does pop.  
+
+<p>
+
+      Key to the planet tables:
+
+<dl compact>
+<dt> a = <dd> agri
+<dt> f = <dd> fuel
+<dt> Z = <dd> repair or shipyard or both
+</dl>
+
+<dl>
+<dt>Table: <dd> Chance the Planet has of popping (chance out of 100):
+
+<pre>
+                     Planet Resources                     Atmosphere
+ ---    --Z    -f-    -fZ    a--    a-Z    af-    afZ
+
+  2      3      2      2      5      7      4      8     Toxic    (TOXC)
+  3      5      2      4      9      11     7      12    Tainted  (TNTD) 
+  5      7      4      6      12     14     10     15    Thin     (THIN)
+  8      12     7      10     20     24     18     23    Standard (STND)
+</pre>
+
+<dt>Table: <dd>Pop Multipliers (if the planet pops) the armies popping will 
+           be multiplied by this a negative number means negative growth 
+           (down to 4)
+
+<pre>
+                     Planet Resources                     Atmosphere
+ ---    --Z    -f-    -fZ    a--    a-Z    af-    afZ
+
+ -.08    0     -.1    -.03    0      .5   -.05     .5    Toxic    (TOXC)
+ .03    .05    .02    .04    .06    .07    .06    .07    Tainted  (TNTD) 
+ .05    .07    .05    .06    .10    .11    .08    .10    Thin     (THIN)
+ .09    .12    .08    .10    .17    .19    .15    .18    Standard (STND)
+</pre>
+
+<dt>Table: <dd>Maximum planet army capacity.  Once this limit is reached, 
+           no more armies can pop on that planet.  You can place more 
+           than this amount on a planet.
+
+<pre>
+                     Planet Resources                     Atmosphere
+ ---    --Z    -f-    -fZ    a--    a-Z    af-    afZ
+
+  5      10     7      10     15     15     10     18    Toxic    (TOXC)
+  9      14     11     14     20     20     14     22    Tainted  (TNTD) 
+  12     18     15     18     25     25     19     27    Thin     (THIN)
+  15     22     18     25     40     35     27     40    Standard (STND)
+</pre>
+
+</dl>
+
+  A new popping scheme was introduced with the 2.3 server.  It is
+linear, not exponential and only makes use of the max army capacity
+table of the previous scheme.
+
+<hr>
+
+<h1>Player Info</h1>
+
+
+
+<h2>Player Stats</h2>
+
+    Stats are soon to be figured differently.  Before it was: 
+
+<pre>
+          ratio = kills/losses
+          battle = ratio + offense
+          strategy = dooshes + planets + resources bombed + armies bombed
+</pre>
+
+    now it is:
+
+<pre>
+          battle = (offense + dooshes) / 2;
+          strategy = (planets + resources + armies) / 6;
+          special = (jsrating + wbrating + sbrating) / 3;
+          ratio = (battle + strategy + special) / 3;
+</pre>
+
+Strategy is averaged by double its amount, because it has a tendency
+to become very high, very fast... (which may mean that the strategy
+requirement for ranks will go up).
+
+<h2>Ranks</h2>
+
+<pre>
+         Rank        Geno's    DI     Battle   Strategy  Special
+
+     Recruit           -       --      ----      ---       --- 
+     Specialist        1       10      0.30      0.3       ---
+     Cadet             2       25      0.40      0.6       ---
+     Midshipman        3       45      0.50      0.9       ---
+     Ensn. Jnr. Grd.   4       70      0.70      1.2       ---
+     Ensign            5       100     0.90      1.5       ---
+     Lt. Jnr. Grd.     6       140     1.10      2.0       ---
+     Lieutenant        8       190     1.30      2.5       ---
+     Lt. Cmdr.         10      250     1.50      3.0       0.5
+     Commander         15      300     1.80      3.5       0.7
+     High Cmdr.        18      350     2.00      4.0       1.0
+     Captain           25      400     2.10      4.3       2.5
+     Fleet Captain     50      500     2.15      4.8       3.0
+     Commodore         75      700     2.20      5.3       3.3
+     Admiral           100     900     2.25      5.7       3.6
+     Rear Admiral      300     1200    2.30      6.0       3.8
+     Moff              700     1700    2.35      6.1       4.0
+     Grand Moff        1000    2500    3.40      6.2       4.2
+</pre>
+
+<h2>Royalty</h2>
+
+Royalty doesn't mean anything, other than Emperor.  The Emperor Royalty 
+was created in the thought that all server admins (even if they aren't 
+an admin at that site) would be an Emperor, so that the chances of 
+having somebody who has a little control over the game would be in
+the game would be higher.
+
+<p>
+
+This is so that if mindless drivel decide to 'crash' the game, there is 
+hopefully somebody around who can handle it.  We *may* allow anybody to 
+choose any royalty they desire, other than Emperor--to augument their
+player name (such as Dread Pirate Lynx).  
+
+
+Royalties:
+<menu>
+<li> Wesley (an insult reserved for players who annoy Emperors)
+<li> Centurion
+<li> Praetor
+<li> Emperor
+</menu>
+
+
+<h1>Ships</h1>
+
+These are out-of-date ship stats in a somewhat readable format.
+Sorry, we're pretty damn busy and would happily accept some help to
+update this.
+<br>  The first bit of text is some notes dealing with ships,
+and ship play.  Following this are documents on playing different ship
+types.
+
+<p>
+
+<dl>
+
+<dt>Cloak Cost: <dd>Due to warp, the cost for cloaking has been
+slightly altered. Now, it is a multiplier of the speed you are
+travelling.  This means it is possible to go warp 1 in some ships, and
+regenerate, But at higher speeds, the cost becomes exorbitant.
+
+<dt>Explosion damage: <dd>is now calculated as a percantage of the
+fuel you carry, rather than a set number.  Appx 75% of your fuel does
+the same amount of damage as an old explosion. (Old explosions are
+75:SC; 100:DD,CA,BB,AS, 200:SB)
+
+<dt>Warp Initialize: <dd>the initialization time, in ticks, the
+seconds are guestimates warp initialize cost is roughly 1/5 the ships
+maxfuel
+
+<dt>Bomb: <dd>the ships bomb rating.
+</dl>
+
+
+<pre>
+THE SCOUT (SC)
+
+
+  Combat Speed(s): 5 (4-7)
+  Cruising Speed (without shields): 8
+  Max Impulse Speed: 12
+  Warp Speed: 27
+  Warp Initialize Time: 30 (4 seconds)
+  Warp Initialize Speed: 3
+  Max Afterburner Speed: 14
+  Max damage/shields: 75/75
+  Torpedo Speed: 16
+
+  Torpedo damage/fuelcost: 25/175
+  Phaser damage, close range: 50-75
+  Phaser cost: 525
+  bomb: 0
+
+  Maximum fuel: 5000 
+  Maximum armies: 2
+  Maneuverability: Excellent
+  Acceleration: Excellent 
+  Deceleration: Excellent
+  Tractor/presser strength: Poor
+  
+  Notes: 
+    Scanners:  Scouts have strong scanners and therefore get automatic updates
+               on any planet they are near.
+
+
+
+THE DESTROYER (DD)
+
+
+  Combat Speed(s): 5 (4-6)
+  Cruising Speed (without shields): 6-7
+  Max Impulse Speed: 10
+  Warp Speed: 22
+  Warp Initialize Time: 50 (6 seconds)
+  Warp Initialize Speed: 3
+  Max Afterburner Speed: 12
+  Max damage/shields: 85/85
+  Torpedo Speed: 14
+
+  Torpedo damage/fuelcost: 30/210
+  Phaser damage, close range: 60-85
+  Phaser cost: 595
+  bomb: 5
+
+  Maximum fuel: 7000 
+  Maximum armies: 5
+  Maneuverability: Good
+  Acceleration: Good 
+  Deceleration: Excellent
+  Tractor/presser strength: Fair
+  
+  Notes:
+    The Destroyer is a good ship that does everything ok, but nothing
+        spectacularly.  It is good for quick run and takes of planets.  
+
+
+THE CRUISER (CA)
+
+
+  Combat Speed(s): 4 (4-5)
+  Cruising Speed (without shields): 6 
+  Max Impulse Speed: 9
+  Warp Speed: 19
+  Warp Initialize Time: 60 (7 seconds)
+  Warp Initialize Speed: 2
+  Max Afterburner Speed: 11
+  Max damage/shields: 100/100
+  Maximum fuel: 10000 
+  bomb: 10
+
+  Torpedo damage/fuelcost: 40/280 
+  Plasma damage/fuelcost: 100/3000
+  Phaser damage, close range: 90-100
+  Phaser cost: 700 
+
+  Maximum armies: 10
+  Manuverabilty: Fair
+  Acceleration: Fair
+  Deceleration: Good
+  Tractor/Pressor strength: Good
+
+
+THE LIGHT CRUISER (CL)                       --Alternate Paradise
+
+
+Combat Speed(s): 5 (4-5)
+Cruising Speed (without shields): 6-7
+Max Impulse Speed: 10
+Warp Speed: 24
+Warp Initialize Time: 45 (5.5 seconds)
+Warp Initialize Speed: 2
+Max Afterburner Speed: 12
+Max damage/shields: 90/95
+Torpedo Speed: 13
+
+Torpedo damage/fuelcost: 35/240
+Phaser damage, close range: 55-80
+Phaser cost: 600
+bomb: 6
+
+Maximum fuel: 9000
+Maximum armies: 4
+Maneuverability: Good
+Acceleration: Good
+Deceleration: Good
+Tractor/pressor strength: Fair
+
+(Important other stuff for notes:
+     CL phaserfuse  8
+     CL repair      85
+     CL tractstr    2800
+     CL tractrng    .9
+     CL torpfuse    30)
+
+
+THE CARRIER (CV)                             --Alternate Paradise
+
+
+Combat Speed(s): 3-4
+Cruising Speed (without shields): 5
+Max Impulse Speed: 9
+Warp Speed: 20
+Warp Initialize Time: 75 (8.5 seconds)
+Warp Initialize Speed: 1
+Max Afterburner Speed: 11
+Max damage/shields: 150/120
+Fighter Torpedo Speed: 12
+
+Fighter torp damage/Fighter launch cost: 40/750
+Phaser damage, close range: 65-90
+Phaser cost: 450
+bomb: (20)
+
+Maximum fuel: 15000
+Maximum fighters: 24 (6 armies)
+Maneuverability: Very Poor
+Acceleration: Fair
+Deceleration: Fair
+Tractor/pressor strength: Good
+(stuff for notes:
+      CV phaserfuse   6
+      CV dronespeed   14  (fighters)
+      CV dronefuse    250 ("      ")
+        (effective fuse: 100 -- before they return))
+
+
+THE FLAGSHIP/FRIGATE (FR)
+
+
+  Combat Speed(s): 3 (3-5)
+  Cruising Speed (without shields): 5
+  Max Impulse Speed: 8
+  Warp Speed: 17
+  Warp Initialize Time: 70 (8 seconds)
+  Warp Initialize Speed: 2
+  Max Afterburner Speed: 10
+  Max damage/shields: 115/115 
+  Maximum fuel: 12500 
+
+  Torpedo damage/fuelcost: 40/290
+  Plasma damage/fuelcost: 130/3900
+  Phaser damage, close range: 80-105
+  Phaser cost: 800
+  bomb: 15
+
+  Maximum armies: 6 
+  Manuverabilty: Fair 
+  Acceleration: Fair
+  Deceleration: Fair
+  Tractor/Pressor strength: Good
+
+  Notes:
+    The frigate stands between the Cruiser and BB (so much so
+    that when I statted it out, I just averaged nearly all of 
+    the scores together from the two ships).  It is *not* a Galaxy
+    class ship, because people were confusing it with a Galaxy
+    class ship, we changed its name to Frigate.
+
+
+THE BATTLESHIP (BB)
+
+
+  Combat Speed(s): 3 (3-4)
+  Cruising Speed (without shields): 4
+  Max Impulse Speed: 8
+  Warp Speed: 16
+  Warp Initialize Time: 70 (8 seconds)
+  Warp Initialize Speed: 1
+  Max Afterburner Speed: 10
+  Max damage/shields: 130/130 
+  Maximum fuel: 14000 
+
+  Torpedo damage/fuelcost: 40/300*
+  Plasma damage/fuelcost: 130/3900
+  Phaser damage, close range: 80-105
+  Phaser cost: 900*
+  bomb: 20
+
+  Maximum armies: 6 
+  Manuverabilty: Poor 
+  Acceleration: Poor
+  Deceleration: Fair
+  Tractor/Pressor strength: Excellent
+
+  * These are slightly lower than in broncotrek
+
+
+THE ASSAULT SHIP (AS)
+
+
+  Combat Speed(s): 4 (4-6)
+  Cruising Speed (without shields): 6
+  Max Impulse Speed: 8
+  Warp Speed: 18
+  Warp Initialize Time: 80 (9-10 seconds)
+  Warp Initialize Speed: 1
+  Max Afterburner Speed: 10
+  Internal damage/shields: 200/80
+  Torpedo Speed: 16
+  Maximum fuel: 6000
+
+  Torpedo damage/fuel: 30/270
+  Phaser damage: close range: 55-80
+  Phaser cost: 560
+  Bomb: 50 
+
+  Maximum armies: 20 
+  Manuverabilty: Poor/Fair
+  Acceleration: Fair
+  Deceleration: Good
+  Tractor/Pressor strength: Poor/Fair
+
+  Notes:
+    The best and most deadly usage of a AS is in unison with a JumpShip
+
+
+THE JUMPSHIP (JS)
+
+
+  Cruising Speed: 6-10
+  Max Impulse Speed: 20
+  Warp Speed: 45
+  Warp Initialize Time: 7 (a minute seconds)
+  Warp Initialize Speed: 2
+  Max Afterburner Speed: 60
+  Internal damage/shields: 60/5
+  Torpedo Speed: 18
+  Maximum fuel: 50000
+
+  Torpedo damage/fuel: 5/1000
+  Phaser damage: close range: 15-25
+  Phaser cost: 500
+  Bomb: *cannot orbit* 
+
+  Maximum armies: *cannot carry armies* 
+  Manuverabilty: Good
+  Acceleration: Excellent
+  Deceleration: Excellent
+  Tractor/Pressor strength: Excellent
+  Docks: 4
+  Defenders required: 3
+  Planets required: 0
+  Rebuild time: 12 minutes (this is a recent change)
+  Maximum Number: 1
+  Rank required: 1 (Specialist)
+
+  Notes:
+   *The JS is an engine, a DAMN big engine, with four docks on it.  The
+    weaponry is thrown on, on the side.  Tearing somebody off a dock
+    (this includes all bases) damages the ship carrying it, but is an
+    often used tactic with the JS (quick AS depositing).
+   *The JS can refuel.
+
+
+THE WARBASE (WB)
+
+
+  Combat Speed(s): 2 (2-3)
+  Cruising Speed (without shields): 3
+  Max Impulse Speed: 3
+  Warp Speed: 6
+  Warp Initialize Time: 100 (12 seconds)
+  Warp Initialize Speed: 2
+  Max Afterburner Speed: 5
+  Internal damage/shields: 250/500
+  Torpedo Speed: 15
+  Maximum fuel: 50000
+
+  Torpedo damage/fuel: 45/450
+  Phaser damage: close range: 135
+  Phaser cost: 1150
+  Bomb: 90
+
+  Maximum armies: *cannot carry armies* 
+  Tractor/Pressor strength: Excellent
+  Docks: 2
+  Defenders required: 3
+  Planets required: 4
+  Rebuild time: 15 minutes (this is a recent change)
+  Maximum Number: 1
+  Rank required: 1 (Specialist) (Later will move to 3, Midshipman)
+
+  Notes:
+   *The Warbase is a weapons/bombing platform.  It cannot carry armies, but
+    can orbit planets, and is extremely deadly when bombing, having a chance
+    of bombing to 1 army.
+   *Phasers and Torps are both extremely potent near a Warbase, but they loose
+    their effectiveness with range rather quickly.
+   *the Warbase Can fuel and repair, but cannot refit planets.  It can orbit.
+
+
+THE STARBASE (SB)
+
+
+  Combat Speed(s): 2 (2-3)
+  Cruising Speed (without shields): 3
+  Max Impulse Speed: 3
+  Warp Speed: 6
+  Warp Initialize Time: 100 (12 seconds)
+  Warp Initialize Speed: 2
+  Max Afterburner Speed: 5
+  Internal damage/shields: 500/600
+  Torpedo Speed: 14
+  Maximum fuel: 60000
+
+  Torpedo damage/fuel: 30/300
+  Phaser damage: close range: 120
+  Phaser cost: 960
+  Bomb: 50
+
+  Maximum armies: 25
+  Tractor/Pressor strength: Excellent
+  Docks: 6
+  Defenders required: 4
+  Planets required: 7
+  Rebuild time: 30 minutes (this is a recent change)
+  Maximum Number: 1
+  Rank required: 2 (Cadet) (later will move to 4, Ensign Jnr.)
+
+
+THE JUMPSHIP (working as a team)
+
+The Jumpship probably requires more teammwork to pull off correctly than any
+other ship in Netrek.  It can carry up to 4 passengers and can hit warp 45
+(impulse 20, afterburn 60)
+
+</pre>
+
+<hr>
+
+<h2>Movement/Communication</h2>
+
+Moving while in the JS is a tricky situation.  If the team is a scumm team
+(taking planets/carriers) the enemy will probably be out to get you.  This
+means that you absolutely have to move fast.  Most directions should be decided
+by the carrier.  If the carrier doesn't give a direction before they dock, the
+JS should simply scream away, and change course at a later time.
+
+<p>
+
+Now, to the carrier:  Use simple short commands, the best thing to do is to
+give polar coordinates and then give more detailed directions later, such as:
+
+<pre>
+	R0->R3  n
+	Jumpship->R3  Twinkerbell (R0) has successfully docked on bay 2 Captain.
+</pre>
+
+at this point the JS pilot should simply scream to the north (only
+avoiding stars and ugly looking enemies).  Note: the most frustrating
+thing is to tell a js captain to move, and have him sit there doing
+nothing.  Warp initialize takes 7 ticks (less than a second).
+Therefore, the best thing to do is to first use afterburners to get
+away, then switch to warp at a later point.  (n = north, s = south, e
+= east, w = west--don't use galaxy rotation, it throws this all off :)
+then, after you are away from danger the carrier can give better
+directions, say system first, then planet:
+
+<pre>
+	R0->R3  dec twi
+</pre>
+
+	Which means the dec system, planet twi
+<p>
+	Other things that the carrier could say would be:
+<pre>
+	R0->R3  ++
+	R0->R3  --
+</pre>
+	++ means I can still drop armies
+<br>	-- means I need a new load
+
+<h2>Dropping/Picking up a Carrier</h2>
+
+	if you are a JS pilot, and you are carrying an AS, the best thing to do
+is to drop them ON TOP of the planet.  Don't tractor them off you as you take
+damage (it hoses the docking bay).  What you should do is decelerate do warp 3,
+and come to a virtual stop on the planet, then all the AS has to do is to lock
+onto the planet and they have immediate orbit.  You must move fast because you
+only have 50 damage, and if the planet has lots of armies you can die rather
+quickly.
+
+<p>
+
+	If there are enemies in the area, cloak, and stay near the carrier, if
+they are really near the planet, uncloak and try to lure them away (people have
+this habit of trying to kill the nearest JS, since they are so annoying).
+
+<p>
+
+	When a ship comes to dock on you slow to warp 2 (its easier).  If the
+AS is near you tractor them to you, but TURN OFF your tractors before they are
+within a few millimeters of you (Same goes for the AS).  The best thing to do
+is to be on the planet when they are ready to leave, so they can do the same
+thing you do on dropping them off (just lock onto you, and you fly by
+them--they don't have to move (AS's accelerate damn slow)).
+
+<p>
+
+	Also, while a carrier is dropping if there are enemies do your best to
+keep them from firing on the planet.  Tractor them away, do whatever you can,
+but mess up their aim, etc (don't fire torps, its a waste of time/fuel/wtemp). 
+If your real bored its alway's fun to tractor enemies into the stars :)
+
+<h2>Configuration</h2>
+
+	There are several different ships which can be good with a JS,
+depending upon the situation.
+
+<dl>
+<dt>	BEGINNING of the game:
+
+<dd> Have a AS/SC/heavy.  The heavy ship is simply an opportunity
+escort/defender/bomber/ogger.  CAs/FRs work good.  This config is good
+for the beginning as the SC has to do nothing other than be on the JS
+(the pilot will be doing most of the command decisions in this
+situation.).  All players on the JS should be checking planets as they
+fly over them to see if they are worth taking/bombing.  <b>If</b> they
+are worth bombing(and they are an enemy planet) the AS will drop off
+and bomb with either the help of the heavy, or the defense of the
+heavy.  The SC can usually scout near planets while they are busy (SC:
+don't go too far, the JS cannot wait for you to return).
+
+<dt>	MID game, with good scouting by other teammates:
+
+<dd>	AS (and possible heavy).  The AS needs kills and armies (even if its 1
+kill).  This is the basic scumm setup, and all the basic rules apply, take
+planets strategically, leaving the enemies with bad planets which don't pop
+frequently and are hard to defend.  (If somebody on the team is deciding which
+planets to take, listen, don't go off on your own).
+
+<dt>	END game, LPS:
+
+<dd>	well, I've the slightest idea for this situation, most JS captains I
+know won't dare get close enough.  I would say have 1 AS(carrier) and 3
+heavies.  The 3 heavies act as decoy's, going off in different preset
+directions and clearing the planet (same with JS, at this point you can loose
+it) while the AS attempts to take.
+
+<dt>	SCREAMING OGG:
+
+<dd>	4 BB's.  Best used against bases, everybody cloaks and screams in, the
+BB's need to constantly det, and hope that the SB captain doesn't get a good
+lock.  The JS doesn't do mega explosion damage anymore, so you have two
+choices, if you are willing to sacrifice everybody, uncloak firing everything
+right onto of the SB, and try to get EVERYBODY to explode on the base. 
+Otherwize use the JS as a ogg shuttle, and drop the 4 cloaked BB's off right
+next to the Base, and have them do a regular ogg.
+
+</dl>
+
+	well, i know there is more, but this is all spur of the moment, hope it
+makes sense :)
+<br>
+		-Lynx (Brandon) 
+
+<hr>
+
+------- Emperor's Official Correspondence :
+
+<pre>
+    ID:       Royal Databit 1153847
+    Security: Top, Super, Kill-Your-Grandmother-If-She-Glances-At-It Secret
+    From:     Emperor Odius XIIV, Ruler of The Galaxy (except for a
+                very small portion currently occupied by pretenders to
+                the royal title)
+    To:       Praetor Triferro, Keeper of the Snakes
+    Subject:  Last minute details before plan Z
+    Stardate: 2592.paradise.2.0
+-------
+</pre>
+
+    It has come to my attention that some of our troops are not up to the
+usual high standards of the empire's military.  This is intolerable.  We must
+wipe out those pesky pretenders to my title.  I AM Emperor Kaiban, ruler of
+the galaxy, and I will not accept anyone else calling themself emperor in
+MY galaxy.  If someone wishes to call themself emperor, well, then let them
+go find another galaxy.  This one is mine. 
+<p>
+    Today we launch plan Z to exert my authuority across the entire region of
+known space. The troops  must be ready to exterminate the enemy.  As a last
+minute detail, all empire troops should update their knowledge of miltitary
+science.
+<p>
+    I, therefore, decree that all troops must review the enclosed information
+to brush up on their knowledge.  So let it be written, so let it be done.
+<p>
+                    His Royal Majesty Odius
+
+------- end: Emperor's Official Correspondence: Royal Databit 1153847
+
+<hr>
+<pre>
+     Holographic Information System #532634265433.32463
+     Begin: introduction
+     Course: ID# 2450
+</pre>
+
+     Hi!  I am your instructor.  As you might have surmised, I am not a real
+person.  I am an artificial intelligence entity.  What you are seeing is a
+holographic body.  I will be your instructor in the arts of war.
+
+<p>
+
+     Hey!!  What do you mean my body is green?  Green is a perfectly fine
+color.  The emperor has declared green to be one of his favorite colors.
+If you don't like it, I can introduce you to a re-education program I
+know.   Anyway, I wanted to be blue, but the engineers did not have any
+blue holographic imagers on hand.
+
+<p>
+
+     Now, enough of this.  I must teach you what you need to know, or the 
+emperor might have me imprisoned in a digital kitchen appliance.  
+
+<p>
+
+  On to the lesson.
+
+<hr>
+
+<h1>The Emperor's Galaxy</h1>
+
+<p>
+
+     The galaxy has nine known stars.  There are shown 
+on your space ship's screen with the pictures to the 
+right...the RIGHT you eediot.  That's your left.  Wake 
+up--(smack) (smack)--this is important.  Ever since 
+planet Hawiian Tropic had an unfortunate nuclear accident, 
+the galaxy has suffered a star screen shortage.  Running 
+over a star can result in extreme sunburn to the captain 
+and the crew.  Therefore, it is strictly forbidden to 
+take one of the emperor's ships too close to a star.
+
+<p>
+
+     Each star has a cluster of planets around it.  Almost all planets
+are in clusters excpet for a few errant ones, which the emperor plans
+to have demolished to make way for the new inter-galactic super-highway
+as soon as the other petty governments in the galaxy are dealt with.
+
+<p>
+
+     You know the emperor has decreed that all planets are equal, but some
+planets are more equal than others.  You certainly would not want to spend 
+your shore leave on Arrakis.  You must be able to determine which planets 
+to drop imperial troops on, so we'll start with planetary atmospheres.
+
+<p>
+
+    Every planet has an atmosphere and there are four types: toxic, tainted,
+thin, and standard.  Toxic atmospheres might be fine for Rigellian leg
+worms, but YOU would not want to live there...and you certainly would not
+want to raise kids on a panet with a poison atmosphere.  But, being
+in the employ of the emperor, sometimes you just will not have a choice.
+
+
+<p>
+
+                       The best type of atmosphere for a planet is, of course, 
+                    a standard one--signified as STND on the ship's sensors.  
+                    The next best is a thin atmosphere, which, suprisingly
+                    enough is designated THIN on the sensors.  Not really 
+                    hospitable, but tolerable is a tainted atmosphere, TNTD.  
+                    And of course every soldier's nightmare is being posted
+                    to a planet with a toxic atmosphere (TOXC).
+
+<p>
+
+                         The type of atmosphere a planet has and the resources 
+                    that have been built on it determine how fast the planet 
+                    pops and how many armies the planet can hold.  A planet 
+                    with an agri and a shipyard built on it pops a lot faster 
+                    and can support more armies than a planet with a tainted 
+                    atmosphere and a repair station on it.
+
+<p>
+
+    Toxic atmospheres are particularily bad because they slowly kill off the
+armies posted to them until there are only three armies left, the ones who
+can fit inside the standard-sized military issue fortress.
+
+<p>
+
+    Planets with standard atmospheres are rare and prized by the emperor.  
+If you discover one, take it to further the noble objectives of our beloved
+emperor.
+
+<p>
+
+     I know you learned this in your academy planetary geology classes; but
+let's review it, just in case you spent your time chasing after Denebian
+women instead of attending classes.  (The low level of the troops the emperor,
+bless him, has been sending me lately just boggles the mind).
+
+<p>
+
+     Now we come to attributes of planets.  Galactic geologist have currently
+identified three planetary attributes: dylthium crystal deposits, metal
+deposits, and arable land.  
+
+<p>
+
+     First off, dylithium crystals--What?  NO, FOOL!  You most certainly
+cannot give a ring with a diythium crystal on it to your girl friend.
+(smack)  (smack)  (Kapow)  What type of twisted sicko are you?  Dilythium
+crystals are poisonous!  Deposits of dilythium crystals on a planet have
+the side effect of creating a toxic atmosphere.
+
+<p>
+
+     The existence of dilithium crstals on a planet 
+allows a fuel depot to be built there.  I don't know if 
+I have to remind you of this, but your trusty space ship 
+needs dilythium to get from one point in space to 
+another. No dilithium, no fuel depot.  No fuel depot, 
+you no go go.
+
+<p>
+   As any member of the Imperial Youth would know:
+dilythium deposits on a planet are indicated by a 
+capital D in the surface attributes of a planet info 
+window or planet list. 
+
+<p>
+
+     Now, onto metal deposits.  Metal deposits are easy to understand.  
+Even you should be able to.  Your ship is made of metal, therefore you 
+need metal to build ships.  You also need metal to repair ships.  So a 
+repair station or a shipyard can only be built on a planet with metal 
+deposits, which are identified with a capital letter M on the info window 
+and the planet list.
+
+<p>
+
+     The last known planetary attribute, as of yet, is arable land.  Arable
+land is more than just soil, of course.  It also takes into account the
+availability of water and whether edible plants grow there.  To build
+an AGRI planet requires that the planet be arable.  There are not many of
+planets in the galaxy with arable land, especially not many with both
+arable land and a standard atmosphere.  If you find one, claim it in the name
+of the Emperor immediately...or sooner if possible.
+
+<p>
+
+<h2>Imperial Construction</h2>
+
+<p>
+
+    It is the goal of the emperor to control the whole of the galaxy.  There-
+fore you should try to take all planets in the galaxy.  Planets with toxic 
+atmosperes and no attributes are not particularily valuable, so you do not
+have to waste troops on them.  We'll come back to take take them after we
+wipe out the pretenders to the royal throne.
+
+<p>
+
+    Once you take a planet, the imperial armies will begin to construct
+resources on the planet.  This contruction takes some time, but the construct-
+ion goes faster the more armies that are on the planet.  If an imperial
+starbase is orbiting the planet, construction is much, much faster. 
+	
+<p>
+
+    There are four types of resources that can be constructed on a planet:
+fuel depots, repair stations, agricultural facilities, and shipyards.  As I
+mentioned earlier, fuel depots can only be built on a planet with dilythium
+deposits, repair stations and shipyards cn only be constructed on planets
+with metal deposits, and agricultural facilities can only be constructed
+on planets with arable land.  
+	
+<p>
+
+    Fuel depots are constructed the fastest; repair stations take a little
+longer.  Once a repair station is constructed, the imperial engineers will
+begin to turn it into a shipyard.  It takes the longest to construct agri-
+cultural facilities.
+	
+<p>
+
+    Agricultural facilities are very valuable because they produce troops
+faster than non-agri planets.  And the emperor can always use more cannon
+fodder--er, soldiers like yourself.
+	
+<p>
+
+     Shipyards are where we build all of our starcraft.   Since usually
+launch new ships from a shipyard, it is important to have shipyards on the
+front line.  We need to be able to get new ships into combat as fast as
+                   possible.  Shipyards are also used to repair ships at 
+                   and to refit to shiny new ships.  There have been some
+                   upgrades to the sensor display of new ships to indicate
+                   whether or not a planet has a shipyard on it. They are
+                   designated with a gear on your planetary display (picture 
+                   to the right).  
+	
+<p>
+
+
+
+<h2>Bombing the Hated Enemy</h2>
+
+	
+<p>
+
+  As our troops strive to build resources on planets, so do the troops of
+the enemy strive to build resources on their own planets.  When you get the
+chance you should bomb the enemies planets.  If you bomb enough, you can 
+destroy the enemy's resources.  Even if you do not have time to completely
+destroy a facility, you can bomb the planet to set back the enemy's construct-
+ion process.  Or bomb it a little at one time, then come back and finish the
+job later.
+	
+<p>
+
+    Each ship type has a different capacity to bomb armies and men off enemy
+planets.  To bomb off resources it is best to use an assault ship or a battle
+ship. Though all ships can bomb off resources; it just may take a lot longer.
+If you can get a warbase behind enemy lines, that will provide the ultimate 
+in resource bombing.
+
+<p>
+
+
+<h2>Planetary Revolution</h2>
+
+<p>
+
+  Sshhhh.  Not so loud.  He might hear you.  Don't stare, fool!  The
+one over near the corner.  He looks like a revolutionary to me.  Hide
+your empire troop badge.  Jupitor, and Venus.  Do I have to explain
+everything to you?
+
+<p>
+     Ships cost money.  Now, we both 
+know that all good citizens enjoy 
+paying 80% taxes to the empire 
+bureaucracy--which, of course, goes 
+to purchase worthwhile things, like 
+Clinton's hair dye. But there are 
+always a few who stir up trouble. 
+Look at this one to the left  -->
+Notice his shifty eyes, whacked out
+long hair.  He's obviously a rebel.
+Probably hiding out on a college
+campus, too.
+
+<p>
+
+    So, now that we have learned how
+to identify rebels, I will cover the
+official Imperial policy:
+
+<p>
+
+    It is official Imperial policy to
+leave at least three armies on a
+planet.  Less than that and it is
+almost certain that the revolutionaries
+will rise up and try to overthrow our wonderful imperial government.  
+The prefect of the planet will give warnings so you can bring in re-
+enforcements, but don't delay; planets are usually crawling with 
+guerrillas.  And don't flash your bureaucratic ID card around while 
+on shore leave:  It's just not safe.
+
+
+
+<p>
+
+
+<h2>Withdrawing from a Planet</h2>
+
+<p>
+
+           (Also known as advancing to the rear, but never, 
+              under imperial decree, as retreating.)
+
+<p>
+
+
+    Sometimes, in the course of war, a planet may come under an onslaught
+of the enemy that is so fierce that the empire may have to temporarily
+abandon a planet or two.  Under these circumstances, the imperial troops
+on a planet should be saved if possible.  All the armies should be taken
+off a doomed planet and the resources should be bombed off to prevent them
+from falling into the hands of the enemy.
+
+
+<p>
+
+
+
+
+
+<h2>Gathering Information on Planets</h2>
+
+
+<p>
+
+    The military needs the most up to date information possible about
+what the state of enemy planets.  You can get information on a planet
+by orbiting it.  Once you leave orbit you never get an update on the 
+status of the planet until you or one of the empire's other ships orbit
+the planet again.  The age of the information the empire curently has
+on a planet is indicated on the info window and planet list of your
+sensors.
+
+<p>
+
+
+
+<h2>Piloting the Emperor's Spacecraft</h2>
+
+<p>
+
+
+  Your trusty spacecraft has three types of engine speeds: impulse, after-
+burners, and warp.  You can use impulse by hitting the keys from 0-20.  
+Impulse engines should be used for travelling short distances and maneauvering
+in combat.  Afterburners are started with the ` key.  THey quickly accellerate
+the ship, but guzzle fuel and heat the engines very fast.  They are best
+used to dodge torps.  The warp drive is started by hitting the - key.
+There is a one time fuel cost for engaging the warp engines.  After they
+are engaged, your ship will slow down, and there will be a several second
+power buildup before you take off.
+
+
+<p>
+
+
+
+<h2>Ship type Explanations:</h2>
+
+    You should be familiar with most of these ships.  The basic
+statistics for the Scout, Destroyer, Cruiser, Battleship, Assault Ship,
+and Starbase are the same.
+
+<dl>
+<dt>    JUMPSHIP
+
+<dd>         This ship is designed to carry people somewhere, fast.  It can
+go warp 45, and carry 4 other ships.  It has virtually no weapons, so it
+is best if you learn to work in coordination with another player, to
+fight in battles.
+
+<dt>    FRIGATE
+
+<dd>         This ship is also known as the Flagship, or Heavy Cruiser.  It
+is simply a Cruiser which is stripped of its peacetime capabilities, and
+built for battle.  It is not quite as strong as a Battleship, but it is
+stronger than a Cruiser.
+
+<dt>    WARBASE
+
+<dd>         The Warbase is a planetary assault platform.  It can go warp 6,
+and orbit/bomb planets.  However, it cannot carry armies to take planets
+(because it has no space, with the bombing bay's and heavy armor).  It
+has relatively small shields (for a base) but an extremely strong hull
+(to resist the planetary retaliation when its shields are down).
+
+</dl>
+
+
+<h2>Rising Through the Ranks</h2>
+
+
+    When you first join the emperor's glorious miltitary, you are of
+course a recruit.  By participating in wars you can rise in rank.  There's
+the list of ranks and the requirements for a promotion on the next page, so
+hit the letter f.
+
+<pre>
+             gen    DI     batl   strat  spec       name  
+              0      0     0.00    0.0    0.0     Recruit   
+              1     10     0.30    0.3    0.0     Specialist   
+              2     25     0.40    0.6    0.0     Cadet   
+              3     45     0.50    0.9    0.0     Midshipman   
+              4     70     0.70    1.2    0.0     Ensn. Jnr. Grd.   
+              5    100     0.90    1.5    0.0     Ensign   
+              6    140     1.10    2.0    0.0     Lt. Jnr. Grd.   
+              7    190     1.30    2.5    0.0     Lieutenant   
+              8    250     1.50    3.0    0.5     Lt. Cmdr.   
+              9    300     1.80    3.5    0.7     Commander   
+              13   350     2.00    4.0    1.0     1st Officer   
+              18   400     2.10    4.3    2.5     Captain   
+              22   500     2.15    4.8    3.0     Commodore   
+              27   700     2.20    5.3    3.3     Fleet Captn.   
+              30   900     2.25    5.7    3.6     Branch Adml.   
+              35  1100     2.30    6.0    3.8     Rear Adml.   
+              40  1400     2.35    6.1    4.0     Moff   
+              50  1700     2.40    6.2    4.2     Grand Moff  
+</pre>
+
+<dl>
+<dt>  genocides	<dd>   The number of genocides you have participated in, win or
+               lose.
+
+<dt>  DI (Destruction Inflicted) 	<dd> A running, non-decreasing total of
+               destruction inflicted.  You get DI for many things, including
+               destroying enemy ships, bombing armies, bombing resources,
+               killing armies that are being carried by an enemy ship, and
+               taking planets.
+
+
+
+
+<dt>  Battle rating	<dd>Your battle rating is a sum of two other ratings: ratio
+               and offense.  Your ratio is how many kills you have divided
+               by losses.  Your offense rating is a comparison of the rate
+               you destroy enemy ships at compared with the rate of the 
+               average soldier.  A battle rating of 2.0 means you are
+               average.
+
+<dt>  Strategy rating	<dd> The strategy rating is made up of four other ratings:
+               planet rating, doosh rating, army bombing rating, and resource
+               bombing rating.  Your planet rating is a comparison of the
+               rate at which you take planets compared with the rate of other
+               troops.  The doosh rating is a rating of how many armies you
+               kill while they are being transported.  The army bombing
+               rating is a rating based on the number of foreign troops you
+               bomb off planets; and the resource bombing rating is a rating
+               of how many resources you bomb off enemy planets.  All these
+               ratings have an average of 1.0.  If your strategy rating is
+               4.0, then you are doing an average job.
+
+<dt>  Special ship rating	<dd> The special ship rating is made up of ratings of how
+               you do piloting the three types of special ships: starbases,
+               warbases, and jumpships.  For starbases and warbases your
+               rating is based on your ratio compared with that of other
+               players.  For the jumpships, your rating is based on the number
+               of planets you help other team members take.
+
+</dl>
+
+  You are promoted, when all your stats are above the minimum values that
+are included in the rankings chart.
+
+<p>
+<hr>  
+
+</body>
+</html>

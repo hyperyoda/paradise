@@ -1,0 +1,17 @@
+Tracker: Patches
+5 metaserver UDP solicitation patch - ID: 658887
+Last Update: Attachment added ( quozl )
+
+Details:
+
+This is an untested patch which merges the metaserver
+UDP solicitation mode into the Paradise source. I did
+not go looking for the queue structures, if any. I'd
+welcome an experts input on that.
+
+Apply with patch -p1
+
+Submitted:
+James Cameron ( quozl ) - 2002-12-27 00:54
+
+File Added    42522: paradise-solicit.diff	2003-02-15 03:19	quozl

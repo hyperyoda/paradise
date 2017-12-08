@@ -1,0 +1,634 @@
+<html>
+<head>
+<title>.xtrekrc / .paradiserc Options</title>
+</head>
+
+<body text="#ffffff" bgcolor="#000000" link="#00ff00" vlink="#c8c864">
+<h1>.xtrekrc / .paradiserc Options</h1>
+
+	by Bill Dyess (Thought)<br> and Robert Forsman (Hammor)
+
+<p>
+	(Editor: I need more input on the new options coming from the TT-line, urgently !)
+</p>
+
+<p>
+	This document almost certainly has errors. If you find
+	any, please send email and we'll fix it for future
+	readers.
+</p>
+<p>
+	The options in this document are read from a .xtrekrc
+	or .paradiserc in the user's home directory, or the
+	current directory. Using the -r switch, any file can be
+	used. </p>
+
+<p>
+	The client doesn't actually parse the options when they
+	are read in: it just stores the values for later use.
+	Because of this, no error messages will be given if a bad
+	setting is in your .paradiserc. The client will just
+	ignore it.
+</p>
+
+<p>
+	The options are case insensitive. sHoWSHielDS is
+	equivalent to showShields, as far as the client is
+	concerned. The latter is obviously easier to read :).
+</p>
+
+<p>
+	Server aliases: any non-switch given on the client command
+	line is taken as a server alias. The client will then,
+	when searching for a default, look for 'default.alias'
+	first and only check for 'default' if it can't find the
+	alias. This allows server-specific settings.
+</p>
+
+<p>
+
+There are three kinds of .paradiserc options:
+
+<dl compact>
+<dt>	int	<dd> integer values: 0, 1, 5, etc.
+<dt>	bool	<dd> boolean values: 0, 1, on, off, yes, no
+<dt>	string	<dd> string  values: twink, scum, WHATever
+</dl>
+
+<p>
+
+The options are listed in this format:
+
+<dl>
+<dt> &lt;<b>name</b>&gt;	&lt;<i>type</i>&gt;	&lt;default&gt;
+<dd>	&lt;description....&gt;
+
+<p>
+</p>
+
+
+<dt> <b>galacticFrequent</b> <i>bool</i>	on
+<dd>	Specify whether to use frequent galactic map updating or not.  Turn this
+	off if you have a slow machine.
+
+<dt> <b>defaultShip</b> <i>string</i>	CA
+<dd>	This is the ship that will be used by default when you click on a team
+	square.
+
+<dt> <b>useRSA</b> <i>bool</i>	on
+<dd>	Turn on RSA for use with servers that require it.  This can also be
+	specified with a command line flag.
+
+<dt> <b>showShields</b> <i>bool</i>	on
+<dd>	Show shields around ships.
+
+<dt> <b>keepPeace</b> <i>bool</i>	on
+<dd>	Keeps your war settings when you die.
+
+<dt> <b>reportKills</b> <i>bool</i>	on
+<dd>	Turns on kill messages.  This command is obsolete - see the .allow
+	window resource.
+
+<dt> <b>showStars</b> <i>bool</i>	on
+<dd>	Show background stars.  Always off when connected to a Bronco server.
+
+<dt> <b>showMySpeed</b> <i>bool</i>	on
+<dd>	Places a small number up and to the right of your ship telling your
+	current speed.
+
+<dt> <b>showTractorPressor</b> <i>bool</i>	on
+<dd>	Makes your tractor/pressor beams visible.
+
+<dt> <b>showAllTractorPressor</b> <i>bool</i>	off
+<dd>	Makes everybody's tractor/pressor beams visible.  Doesn't work on
+	Bronco servers (the information is not sent).
+
+<dt> <b>showLock</b> <i>int</i>	3
+<dd>	Shows lock symbol when locked on to a player based on the following
+	table:
+	<dl compact>
+	<dt>	0	<dd> don't show lock icon
+	<dt>	1	<dd> show icon on galactic map only
+	<dt>	2	<dd> show icon on tactical map only
+	<dt>	3	<dd> show icon on both map windows
+	</dl>
+
+<dt> <b>drawGrid</b> <i>bool</i>	on
+<dd>	Specifies whether or not the galactic grid lines are to be drawn.
+
+<dt> <b>sortPlayers</b> <i>bool</i>	on
+<dd>	Sorts the players in the playerlist by teams.
+
+<dt> <b>newDashBoard</b> <i>bool</i>	on
+<dd>	Obsolete value.  Turns on the new dashboard.
+
+<dt> <b>newDashBoard2</b> <i>bool</i>	on
+<dd>	Obsolete value.  Turns on the color dashboard.
+
+<Dt> <B>Dashboard</B> <I>Int</I>	0
+<dd>	Selects the dashboard to use from the following table:
+	<dl compact>
+	<dt>	0	<dd> old (text) dashboard
+	<dt>	1	<dd> new dashboard
+	<dt>	2	<dd> color dashboard
+	<dt>	3	<dd> rainbow dashboard
+	</dl>
+
+<dt> <b>cloakChars</b> <i>string</i>	??
+<dd>	Replaces the '??' used to denote a cloaked player with the given
+	string.
+
+<dt> <b>showPhaser</b> <i>int</i>	0
+<dd>	This option is obsolete, see the .allow window resource.  For the
+	curious, the value comes from the following table:
+	<dl compact>
+	<dt>	0	<dd> don't show phaser messages
+	<dt>	1	<dd> phaser messages in kill window
+	<dt>	2	<dd> phaser messages in phaser window
+	<dt>	3	<dd> phaser messages in phaser window only
+	<dt>	4	<dd> phaser messages in total review only
+	</dl>
+
+<dt> <b>logging</b> <i>bool</i>	on
+<dd>	Turns on message logging.  By default, all messages will go to stdout
+	(the terminal you ran the client from).  If logfile is specified, then
+	that file will be used.
+
+<dt> <b>logFile</b> <i>string</i>	(stdout)
+<dd>	Specifies a file to be used for logging purposes.  ~ expansion is done,
+	so ~/logfile is a valid filename, as is ~user/logfile.  If the file
+	exists, the text is appended.  A nice header is printed, so the same
+	logfile can be easily used to keep an ongoing record of all messages.
+	It can get quite large though.
+
+<dt> <b>warnHull</b> <i>bool</i>	on
+<dd>	Turns on the hull warning pixels.  The pixels form a circle of points
+	around your ship.  For each 12% of hull you lose, one pixel goes away.
+	Additionally, as your hull damage increases, the color changes from
+	green-&gt;yellow-&gt;red.
+
+<dt> <b>warpStreaks</b> <i>bool</i>	on
+<dd>	Turns on warp streaks.  When on, when a ship goes into warp the
+	background stars will streak into lines.  The effect only lasts a
+	second or two.
+
+<dt> <b>usemsgw</b> <i>bool</i>	on
+<dd>	Sends messages to the warning window.  Doesn't effect the normal
+	message system.
+
+<dt> <b>showShieldDam</b> <i>bool</i>	on
+<dd>	Makes your shields vary in color as shield damage varies.
+
+<dt> <b>udpUpdates</b> <i>int</i>	5
+<dd>	The number of updates/second the client will (attempt) to display.
+
+<dt> <b>extraAlertBorder</b> <i>bool</i>	on
+<dd>	Turns on the tactical warning border.  It changes color based on
+	enemy proximity, green-&gt;yellow-&gt;red as the enemy gets closer.
+
+<dt> <b>udpDebug</b> <i>bool</i>	off
+<dd>	Turns on UDP debugging output.
+
+<dt> <b>udpClientSend</b> <i>int</i>	1
+<dd>	Sets the method used for sending UDP packets.  The number is taken
+	from the following table:
+	<dl compact>
+	<dt>	0	<dd> TCP only
+	<dt>	1	<dd> simple UDP
+	<dt>	2	<dd> enforced UDP (state only)
+	<dt>	3	<dd> enforced UDP (state &amp; weapon)
+	</dl>
+	enforced UDP keeps sending a packet until it is accepted.  The drawback
+	to using this is that a packet can be sent and received by the server
+	several times.  This means that instead of firing one torp you could
+	fire three.
+	
+<dt> <b>udpClientReceive</b> <i>int</i>	1
+<dd>	Specifies the way that UDP is received.  From the following table:
+	<dl compact>
+	<dt>	0	<dd> TCP only
+	<dt>	1	<dd> simple UDP
+	<dt>	2	<dd> fat UDP (lots of extra info sent)
+	<dt>	3	<dd> double UDP (obsolete)
+	</dl>
+
+<dt> <b>tryUDP</b> <i>bool</i>	on
+<dd>	If on, the client will attempt to start UDP automatically.
+
+<dt> <b>udpSequenceCheck</b> <i>bool</i> 	on
+<dd>	Turns UDP sequence checking on and off.  When off, your ship might
+	jump *backwards*.
+
+<dt> <b>clearmap</b> <i>bool</i>	on
+<dd>	Tells the client to ignore the server-stored copy of the keymap.
+
+<dt> <b>font</b> <i>string</i>	6x10
+<dt> <b>boldfont</b> <i>string</i>	-*-clean-bold-r-normal--10-100-75-75-c-60-*
+<dt> <b>italicfont</b> <i>string</i>	-*-clean-bold-r-normal--10-100-75-75-c-60-*
+<dt> <b>bigfont</b> <i>string</i>	-adobe-helvetica-bold-r-normal--34-*-*-*-*-*-*-*
+<dd>	Sets the normal, bold, italic, and big fonts respectively.  Type
+	'xlsfonts' to get a listing of fonts on your system, or use 'xfontsel'
+	to choose a font interactively.
+
+<dt> <b>name</b> <i>string</i>	guest
+<dd>	The default name to use when logging into a server.
+
+<dt> <b>password</b> <i>string</i>	
+<dd>	The password to use when logging into a server.  If both name and
+	password are defined, the login process is automatic.  Both can
+	also be specified on the command line.
+
+<dt> <b>keymap</b> <i>string</i>	aabbccddee...
+<dd>	Remaps the keyboard keys.  The format is &lt;key&gt;&lt;function&gt;&lt;key&gt;...
+	For example, to remap 't' to tractor ('T'), you would use:
+<pre>
+		keymap:	tT
+</pre>
+	Multiple keymaps are accepted.  The final keymap is the sum of all
+	the individual keymaps.
+
+<dt> <b>ckeymap</b> <i>string</i>
+<dd>	Basically the same as keymap except it adds the ability to remap
+	control keys.  A control key is represented by ^&lt;key&gt;, eg control
+	k would be written as '^k'.  Since '^' is a valid key, to use it
+	in your keymap it needs to be written as '^^'.  For example, if you
+	wanted to remap 'q' to control-5 you would use:
+<pre>
+		ckeymap: q^5
+</pre>
+
+<dt> <b>keymap.&lt;ship&gt;</b> <i>string</i>
+<dd>	This keymap is added to any other keymap when you are flying in &lt;ship&gt;.
+	&lt;ship&gt; should be written in two letter format (CA, FR, SC, etc).
+
+<dt> <b>ckeymap.&lt;ship&gt;</b> <i>string</i>		
+<dd>	Same as keymap.&lt;ship&gt; except it allows control characters.
+
+<dt> <b>buttonmap</b> <i>string</i>	1t2p3k4t5p6k7t8p9katbpck
+<dd>	Remaps the mouse buttons to other functions.  The numbers/letters
+	correspond to the keys as follows:
+	<dl compact>
+	<dt>	1	<dd> left mouse button
+	<dt>	2	<dd> middle
+	<dt>	3	<dd> right
+	<dt>	4	<dd> shift-left
+	<dt>	5	<dd> shift-middle
+	<dt>	6	<dd> shift-right
+	<dt>	7	<dd> ctrl-left
+	<dt>	8	<dd> ctrl-middle
+	<dt>	9	<dd> ctrl-right
+	<dt>	a	<dd> shift-ctrl-left	
+	<dt>	b	<dd> shift-ctrl-middle
+	<dt>	c	<dd> shift-ctrl-right
+	</dl>
+	To remap the shift-left mouse button to the macro key ('X'), you would
+	use:
+<pre>
+		buttonmap:	4X
+</pre>
+
+<dt> <b>cbuttonmap</b> <i>string</i>
+<dd>	Same thing as buttonmap but you can map control characters.
+
+<dt> <b>buttonmap.&lt;ship&gt;</b> <i>string</i>
+<dd>	This is to buttonmap as keymap.&lt;ship&gt; is to keymap.
+
+<dt> <b>cbuttonmap.&lt;ship&gt;</b> <i>string</i>		
+<dd>	Same as buttonmap.&lt;ship&gt; except control characters are allowed.
+
+<dt> <b>server</b> <i>string</i>
+<dd>	Sets the default server to string.  Eg, to change the default server
+	to pippin.ee.usu.edu (silly, because it already is) use:
+<pre>
+		server:	pippin.ee.usu.edu
+</pre>
+	
+<dt> <b>flavor</b> <i>string</i>
+<dd>	Sets the flavor.  This setting is checked for very early on.  When
+	checking for any default, that default.flavor is checked for first.
+	For example, if you have:
+<pre>
+		useRSA.paradise:	on
+		useRSA:			off
+		flavor:			paradise
+</pre>
+	in your paradiserc, then useRSA would be enabled because it would be
+	checked for first.  This is really only useful with the server
+	alias feature.  All the paradise servers would have a:
+<pre>
+		flavor.server:	paradise
+</pre>
+	line, and all the bronco servers would have a:
+<pre>
+		flavor.server:	bronco
+</pre>
+	line, and the settings would be qualified .paradise or .bronco
+	accordingly.
+
+<dt> <b>port</b> <i>int</i>	2592
+<dd>	Sets the default port.  Especially useful with the server alias feature.
+
+<dt> <b>shipBitmapPath</b> <i>string</i>
+<dt> <b>shipBitmapPath.1</b> <i>string</i>
+<dt> <b>shipBitmapPath.2</b> <i>string</i>
+<dt> <b>shipBitmapPath.3</b> <i>string</i>
+<dt> <b>shipBitmapPath.4</b> <i>string</i>
+<dd>	Sets the path to search for bitmap albums in.  The numbers correspond
+	to the teams.  If just 'shipBitmapPath' exists, then the client will
+	use all the albums it can find in that directory.  If a shipBitmapPath.1
+	exists, then that teams bitmaps will come from the given directory.
+	I use this so I can have one set of bitmaps in each directory.
+
+<dt> <b>color.white</b> <i>string</i>	white
+<dt> <b>color.black</b> <i>string</i>	black
+<dt> <b>color.red</b> <i>string</i>	red
+<dt> <b>color.green</b> <i>string</i>	green
+<dt> <b>color.yellow</b> <i>string</i>	yellow
+<dt> <b>color.cyan</b> <i>string</i>	cyan
+<dt> <b>color.light</b> grey   	<i>string</i>	light grey
+<dd>	Sets the specified color to the color given.  Look around on your system
+	for a rgb.txt file.  It should contain a list of colors for your 
+	particular system.
+
+<dt> <b>infoIcon</b> <i>bool</i>	off
+<dd>	Turns on the info icon feature.  This changes the enterprise picture
+	icon into an information display.  
+
+<dt> <b>pigSelf</b> <i>bool</i>	off
+
+<dt> <b>metaserver</b> <i>string</i>	metaserver.ecst.csuchico.edu
+<dd>	Sets the metaserver to string.
+
+<dt> <b>continuousMouse</b> <i>bool</i>	off
+<dd>	Turns on the continuousMouse feature.  When enabled, the mouse buttons
+	will autorepeat.
+
+<dt> <b>clickDelay</b> <i>int</i>	5
+<dd>	Sets the number of updates to wait before auto-repeating.  Only 
+	works when using continuousMouse.  The delay is not checked when
+	holding the button down and moving the mouse - the effect is 
+	instantaneous.
+
+<dt> <b>timerType</b> <i>int</i>	3
+<dd>	Changes the way the timer works.  The timer is a hours:minutes:seconds
+	clock located in the bottom-left corner of the dashboard.  The number
+	comes from the following table:
+	<dl compact>
+	<dt>	0	<dd> none
+	<dt>	1	<dd> time of day
+	<dt>	2	<dd> time on server
+	<dt>	3	<dd> time in ship (default)
+	<dt>	4	<dd> user set time (press '@' to reset to 00:00:00)
+	</dl>
+
+<dt> <b>robsort</b> <i>bool</i> off <dd> Sorts the enemy team to the
+left in the sorted playerlist, vice placing them on the right.  Rob
+prefers it this way.  He's weird.
+
+<dt> <b>showDead</b> <i>bool</i>	on
+<dd>	Shows dead players on the playerlist.
+
+<dt> <b>sortOutfitting</b> <i>bool</i>	off
+<dd>	Sorts outfitting players to the bottom of the playerlist (when sorted).
+
+<dt> <b>showPreLogins</b> <i>bool</i>	off
+<dd>	Shows players on the player list as they are logging in.
+
+<dt> <b>hideNoKills</b> <i>bool</i>	off
+<dd>	Replaces 0.00 kills with empty space.  Only works on Paradise and non-RSA
+	bronco servers.
+
+<dt> <b>controlChars</b> <i>bool</i>	off
+<dd>	Obsolete.  Used to change keymap: into ckeymap: as far as parsing was
+	concerned.  It doesn't do anything now.
+
+<dt> <b>warpStreaks</b> <i>bool</i>	off
+<dd>	Turns on warp streaks.  Warp streaks is a visual effect when going into
+	warp: the background stars streak into lines.  
+
+<dt> <b>cloakChars</b> <i>string</i>	??
+<dd>	Changes the string used to identify cloakers on the galactic.  The
+	length of the string can be anything you like.
+
+<dt> <b>showStats</b> <i>bool</i>	off
+<dd>	Turns on the stats window.  
+
+<dt> <b>reportKills</b> <i>bool</i>	off
+<dd>	Makes kill messages show up in the total review window.  Obsolete, see
+	the allow window resource.
+
+<dt> <b>keepPeace</b> <i>bool</i> off <dd> Stay peaceful when reborn.  Otherwise,
+your war settings keep resetting.
+
+<dt> <b>showGalactic</b> <i>int</i> 4 <dd> Sets the planet bitmaps used for the
+galactic map.  The numbers come from:
+
+     <dl compact>
+       <dt> 0 <dd> ownership
+       <dt> 1 <dd> facilities
+       <dt> 2 <dd> nothing
+       <dt> 3 <dd> surface properties
+       <dt> 4 <dd> scout info age (default)
+       <dt> 5 <dd> MOO-style facilities
+     </dl>
+	    
+<dt> <b>showGalacticSequence</b> <i>string</i> 012345 <dd> Sets the sequence the 'B'
+key rotates through the galactic planet bitmaps.  By default, it
+starts at 4 and then goes 5-&gt;0-&gt;1-&gt;2-&gt;3-&gt;back to 4.  If
+instead you used 01, it would go from 4 (the default) to
+0-&gt;1-&gt;0...
+
+<dt> <b>showLocal</b> <i>int</i>	1
+<dd>	Sets the planet bitmaps used for the local (tactical) window.  From the
+	following list:
+     <dl compact>
+       <dt>	0	<dd> show ownership
+       <dt>	1	<dd> show facilities
+       <dt>	2	<dd> show nothing
+       <dt>	3	<dd> show surface properties
+       <dt>	4	<dd> MOO-style facilities
+     </dl>
+
+<dt> <b>showLocalSequence</b> <i>string</i>	01234
+<dd>	Works like showGalacticSequence.
+
+<dt> <b>autoQuit</b> <i>int</i>	199
+<dd>	Sets the time (in seconds) until auto-quit when waiting at the outfit
+	screen.
+
+<dt> <b>showLock</b> <i>int</i>	3
+<dd>	Sets how the lock arrow is displayed:
+     <dl compact>
+       <dt>	0	<dd> don't show
+       <dt>	1	<dd> galactic only
+       <dt>	2	<dd> tactical only
+       <dt>	3	<dd> both
+     </dl>
+
+<dt> <b>packetLights</b> <i>bool</i> off <dd> Turns on packet lights
+in the dashboard.  Yellow is recieve, green is send.
+
+<dt> <b>metaFork</b> <i>bool</i> off <dd> Enables forking for the
+metaserver window.  If on, the metaserver window will not pop down
+when you click to choose.  A client will be forked instead and the
+metaserver window will stay up. <i>(experimental)</i>
+
+<dt> <b>viewBox</b> <i>bool</i> off <dd> Enable the view box.  When
+on, four dots appear on the galactic indicating the corners of your
+tactical screen.
+
+<dt> <b>playerList</b> <i>string</i> ,nTRNKWLr O D d,nTR N K lrSd <dd>
+Specifies a comma-separated list of player list window configurations.
+An empty string between commas (or at the end/beginning) uses the old
+paradise playerlist.  It is completely configurable, with each column
+changeable.  Here's the possible columns:
+<pre>
+  Spc  Let   Name                 Header
+  ---  ---   -------------------- -------------------
+    3  'n'   Ship Number          " No"
+    3  'T'   Ship Type            " Ty"
+   11  'R'   Rank                 " Rank      "
+   17  'N'   Name                 " Name            "
+    6  'K'   Kills                " Kills"
+   17  'l'   Login Name           " Login           "
+    6  'O'   Offense              " Offse"
+    6  'W'   Wins                 "  Wins"
+    6  'D'   Defense              " Defse"
+    6  'L'   Losses               "  Loss"
+    6  'S'   Total Rating (stats) " Stats"
+    6  'r'   Ratio                " Ratio"
+    8  'd'   Damage Inflicted(DI) "      DI"
+    6  'G'   Doosh Rating (oGGing)" Dshng"
+    6  'g'   Dooshes              " Dshed"
+    6  'F'   Resource Rating      " Resrc"
+    6  'f'   Resources bombed     " Rsrcs"
+    6  'Z'   SB Rating            " SBrat"
+    6  'z'   WB Rating            " WBrat"
+    6  'J'   JS Rating            " JSrat"
+    6  'j'   JS Planets           " JSpls"
+    6  'C'   SpeCial ships rating " Specl"
+    6  'E'   Genocides (Endings)  " Genos"
+    1  ' '   White Space          " "
+    6  'B'   Bombing              " Bmbng"
+    6  'b'   Armies Bombed        " Bmbed"
+    6  'P'   Planets              " Plnts"
+    6  'p'   Planets Taken        " Plnts"
+   17  'M'   Display/Host Machine " Host Machine    "
+    7  'H'   Hours Played         " Hours "
+    6  'k'   Max Kills            " Max K"
+    6  'V'   Kills per Hour       "   KPH"
+    6  'v'   Deaths per Hour      "   DPH"
+    9  'w'   War status           " War Stat"
+  PLIST2  (not enabled)
+    3  's'   Speed                " Sp"
+</pre>
+     
+  The columns are defined with the 'playerlist' resource.
+
+     <i>(experimental)</i>
+
+<dt> <b>keepInfo</b> <i>int</i> 0 <dd> How many updates should the
+short information windows be kept up?  0 means forever.
+
+<dt> <b>mac.*.*</b>
+<dd>	Macros are defined in the macros.doc file.  Hopefully you can get it
+	where you got this file.
+     
+</dl>
+
+<h2>Window Resources</h2>
+
+
+The client will look for resources associated with the name of each window
+it tries to open.  All the resources are of the format:
+<pre>
+windowname.resourcename:	value
+</pre>
+
+The possible windowname's are:
+<dl compact>
+<dt> netrek		<dd>	main window
+<dt> local		<dd>	tactical window
+<dt> map		<dd>	galactic window
+<dt> xtrekrc_help	<dd>	.xtrekrc help window
+<dt> review_all		<dd>	ALL message window
+<dt> review_team	<dd>	TEAM message window
+<dt> review_kill	<dd>	KILL message window
+<dt> review_your	<dd>	personal message window
+<dt> review_phaser	<dd>	phaser message window
+<dt> review		<dd>	joined review window
+</dl>
+
+other windows you can change, but why?:
+
+<ul>
+  <li> count			
+  <li> waitquit
+  <li> wait_icon
+  <li> info
+  <li> stats
+  <li> Network Statistics
+  <li> rank
+  <li> planet2
+  <li> planet
+  <li> tstat
+  <li> warn
+  <li> Motd
+  <li> help
+</ul>
+
+Possible resourcename's are:
+
+<dl>
+<dt> <b>geometry</b> <i>string</i>	varies
+<dd>	Sets the position and size of the window.  Use the following format:
+		&lt;columns&gt;x&lt;rows&gt;+&lt;xoffset&gt;+&lt;yoffset&gt;
+	for example:
+     <pre>
+		netrek.geometry:	1000x830+0+1
+     </pre>
+
+<dt> <b>mapped</b> <i>bool</i>	varies
+<dd>	Tells the client to map (or not to map) a particular window.  
+
+<dt> <b>parent</b> <i>string</i> varies, usually root <dd> Specify which window it
+should be mapped inside of.  This is usually 'root' or 'netrek'.
+'root' gives the window a window-manager supplied border, while
+'netrek' puts it inside the main window.  For example:
+     <pre>
+		windowname.parent:	netrek
+		windowname.parent:	root
+     </pre>
+
+<dt> <b>allow</b> <i>string</i>	varies
+<dd>	allow only works for message windows.  This resource allows you to 
+	set which windows a message is allowed to go to.  The string is a 
+	list of one-letter abbreviations for each type of message allowed.
+	These are the possible abbrevitations:
+     <dl compact>
+       <dt>	A	<dd>	All
+       <dt>	T	<dd>	Team
+       <dt>	I	<dd>	Individual (to you)
+       <dt>	K	<dd>	Kills
+       <dt>	P	<dd>	Phaser
+     </dl>
+
+	Here are the defaults:
+     <pre>
+		review.allow:              ATIKP            
+		review_all.allow:          A
+		review_team.allow:         T 
+		review_your.allow:         I 
+		review_kill.allow:         K
+		review_phaser.allow:       P
+     </pre>
+
+
+</dl>
+
+
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html> <head>
+<title>The Paradise League Server</title>
+</head>
+
+<body>
+<h1>The Paradise League Server</h1>
+
+<h2>How to set up a paradise league server</h2>
+
+  Compile the server.  If you have a working server already, you're
+good to go.  There are no special options to turn on to configure a
+league tournament server.
+
+<p>
+
+  Instead of invoking listen with "listen -p 2592" start four of them:
+
+<pre>
+% listen -H -p 3333
+% listen -A -p 4444
+% listen -H -O -p 1111
+% listen -A -O -p 2222
+</pre>
+
+  The listen program automatically invokes ntserv with the proper
+arguments and ntserv then invokes the daemon with the correct
+arguments.  A daemon running in league mode does NOT use the .sysdef
+file.  Any necessary adjustments will be made by the League Council
+(you can modify sysdefaults.c or getship.c if you REALLY want to
+change something, but we discourage it).
+
+<p>
+
+  People can then connect to the port of their choice and they will be
+forced onto the home or the away team.  The listen programs with -O
+will force the player to be an <a href="../observe.html">observer</a>
+at first.
+
+<h2>How to play a league game</h2>
+
+  Once in the game players have a number of commands available to
+them.  To access these commands send yourself a message starting with
+the word "league" (or any abbreviation down to "le").
+
+<p>
+
+  Normally one player will be captain and declare himself so by
+issuing the command "league captain".  The captain's next duty is to
+name his team with "league teamname <i>string</i>".
+
+<p>
+
+  The away team has first choice of empires.  To choose an empire the
+captain issues the command "league <i>shortname</i>".  The available
+empires are FED, ROM, KLI, and ORI.  The home team then chooses an
+empire.
+
+<p>
+
+  Once empires are chosen both captains issue the command "league
+start", everyone explodes, and the game enters the warmup.  After 1
+minute of warmup everyone explodes again and the game begins
+("commence scumming, you twinks!").
+
+<p>
+
+  <a href="../controls.html#league" >Other commands</a> are available under
+the league prefix.  Some of them are restricted to captains.
+
+<hr>
+
+<a href="index.html"><img src="../images/paradise.gif"></a>
+
+<p>
+
+<img src="images/PLC_logo.xbm">
+
+<address>Eric Dorman/ &lt;pnetrek.org@edorman&gt;</address>
+</body> </html>

@@ -1,0 +1,244 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <TITLE>Behind the Curtain</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#00FF00" VLINK="#c8c864">
+
+<H1>
+<I>Behind the Curtain</I></H1>
+
+<H3>
+Paradise Netrek Development</H3>
+
+	What's this? You're whining about some aspect of the game.
+	I know, you're thinking "I could reduce the amount of
+	communication between client and server to twenty bytes
+	per second," or, "Hey, this new monster phaser bolt weapon
+	I've been thinking about would be cool to implement."
+	Well, here's your chance. Both the server and client
+	sources are freely available. In fact, the few libraries
+	that they depend on generally come with the system you're
+	working on, can be installed easily, or are available from
+	the GNU mirrors around the world.
+
+<H3>
+<A NAME="SOURCES"></A>Stable Client and Server Sources/Libraries</H3>
+
+	The current server and client sources are available as
+	shown below. Libraries that may be required are also shown
+	below. Note that whatever the current server, client, or
+	library versions are, the links below will always point to
+	the latest <B>stable</B> release. Everything else you find
+	in the directory is either a previous version or a BETA
+	(work in progress), which you should use only if you know
+	what you do.
+
+	<br> The items under RSA are not required unless you are
+	compiling an authorized binary or if you are building a
+	server that does RSA authentication (currently no Paradise
+	servers have this implemented, although the code is there
+	to do it). Unless you are one of the primary client
+	developers , you aren't building an authorizing binary and
+	don't need RSA. Besides, unless you have the
+	<TT>crypt(1)</TT> key, you won't be able to get at the RSA
+	code anyway.
+
+	<P>One final word about RSA: Since RSA is cryptography
+	software, it is subject to United States military export
+	regulations on cryptography and other national security
+	issues. This means that RSA software cannot be exported
+	outside the U.S. or Canada. So, unless you are a United
+	States or Canadian citizen, <B>and</B> living within the
+	United States or Canada, don't ask me for the
+	<TT>crypt(1)</TT> key. You won't get it. </p>
+
+
+<LI>
+	Current stable server version: <B>3.0</B>
+
+<LI>
+	Server:
+<A HREF="http://www.netrek.org/pub/paradise/server/">http://www.netrek.org/pub/paradise/server/</A>
+
+<LI>
+	Current stable client version: <B>TT-1.3.1</B>
+
+<LI>
+	Client:
+<A HREF="http://www.netrek.org/pub/paradise/client/">http://www.netrek.org/pub/paradise/client/</A>
+
+<LI>
+RSA (see note above)
+<br>(Editor: the links below are pointing to nowhere. Where is the stuff ?)
+
+
+<LI>
+GNU MP library: <u HREF="ftp://paradise.sourceforge.net/pub/paradise/RSA/gmp-1.3.2.tar.gz">ftp://paradise.sourceforge.net/pub/paradise/RSA/gmp-1.3.2.tar.gz</u>
+
+<LI>
+RSA library (encrypted!): <u HREF="ftp://paradise.sourceforge.net/pub/paradise/RSA/rsa-paradise.tar.gz.crypt">ftp://paradise.sourceforge.net/pub/paradise/RSA/rsa-paradise.tar.gz.crypt</u>
+
+
+<LI>
+GNU Compression library: <A HREF="http://www.info-zip.org/pub/infozip/zlib/">http://www.info-zip.org/pub/infozip/zlib/</A>
+
+
+
+<H3>
+<A NAME="NEWSLISTS"></A>Contact us!</H3>
+
+<big><b>We need more active developers</b></big>
+<p>
+	We need a next generation of players and coders to pick up
+	the code and maintain a noteworthy offspring of a
+	noteworthy classic game.
+
+	<br>
+
+	Get the code, check it out, get your friends to play it
+	with you, and improve where necessary. Get in contact with
+	the project admins to inform them about your interest to
+	join the dev-crew. Join the mailing-lists and ask! </p>
+
+	<p> Discussion about Paradise Netrek development, game
+	play, and league play occurs on these mailing lists,
+	forums and hopefully soon on the newsgroup again, too.</p>
+
+	<p>Except for the newsgroup everything else is hosted by
+<a href="http://sourceforge.net/">SourceForge.net</a>.
+
+
+
+<li>
+<strong><a href="http://sourceforge.net/projects/paradise/">Paradise development homepage</a></strong>
+
+<li>
+<a href="http://sourceforge.net/forum/?group_id=1104">Paradise discussion forums</a>
+
+<li>
+<a href="http://sourceforge.net/mail/?group_id=1104">Paradise mailing-lists</a>
+	
+	<li>
+		paradise-workers: for the developers
+	<li>
+		paradise-games: just games announcements
+	<li>
+		paradise-announce: general announcements
+	<li>
+		paradise-users: use of client and server, their configs
+	
+
+<li>
+	IRC in <b>#paradise</b> on <b>'irc.freenode.net'</b>
+<li>
+<A HREF="news:rec.games.netrek">news:rec.games.netrek</A>
+
+	<p> The USENET newsgroup for discussion regarding Netrek
+	in general. Once there was a special Paradise NG, but
+	since the fall of Paradise several years ago it's only
+	polluted by SPAM. Therefore, if you want to use the
+	USENET, try it in the general Netrek group. You could very
+	well meet long-ago fellow Paradisers there. Not moderated.
+	</p>
+
+
+
+
+<H3>
+<A NAME="WORKERS"></A>Specific Paradise Workers</H3>
+
+	<p>
+	Here's a list of (formerly) active Paradise Workers and what they're
+	up to currently. It's alphabetical because I like it that
+	way. Note that with the apparent demise of most Paradise
+	activity, most of these people have moved on to other
+	things, so if you poke them and your email bounces, don't
+	blame me. (Editor: if somebody knows of up to date
+	informations, either correct eMail-adresseses or if they
+	want to be removed from this list, let me know) </p>
+
+	<p>
+	The addresses are reversed to keep away robot-grabber spammers.
+	</p>
+
+<table border=0 align=center>
+<tr>
+<td>
+
+<DL>
+<DT> Ola Andersson <I>(cs.umu.se@dvloan)</I></DT>
+<dd> - Client developer (Internationalization)
+</dd>
+<DT> Mike Darweesh <I>(radix.net@jaromir)</I></DT>
+<dd> - Client developer (Mac client--retired)
+</dd>
+<DT> Eric Dorman <I>(paradise.netrek.org@edorman)</I></DT>
+<dd> - FTP/Web Site Maintainer
+<br> - Deepspace server hacker
+</dd>
+<DT> Bill Dyess <I>(dyess.com@Bill)</I></DT>
+<dd> - Client developer (Beta client)
+</dd>
+<DT> Chip Edwards <I>(sun.com@chip.edwards)</I></DT>
+<dd> - Solaris x86 client
+</dd>
+<DT> Rob Forsman <I>(thoth.purplefrog.com@paradise)</I></DT>
+<dd> - Linux X11R5 client
+<br> - SunOS client
+</dd>
+<DT> Stephen Franks <I>(mit.edu@sdfranks)</I></DT>
+<dd> - NetBSD client
+</dd>
+<DT> Ken Germann <I>(digibd.com@keng)</I></DT>
+<dd> - Skypoint Server hacker
+<br> - BSDI client
+</dd>
+<DT> Tom Hanson <I>(prism.gatech.edu@gt4908a)</I></DT>
+<dd> - Server developer
+<br> - Client developer
+</dd>
+</dl>
+
+</td><td>
+
+<dl>
+<DT> Heath Kehoe <I>(icaen.uiowa.edu@hakehoe)</I></DT>
+<dd> - Apollo client
+<br> - HP700-800 client
+</dd>
+<DT> James E. King, III <I>(ariessys.com@jking)</I></DT>
+<dd> - Client developer (Mac client)
+</dd>
+<DT> Mike McGrath <I>(epx.cis.umn.edu@mcgrath)</I></DT>
+<dd> - Server developer (terrain code)
+</dd>
+<DT> Matt Mead <I>(goof.com@mmead)</I></DT>
+<dd> - Solaris client
+</dd>
+<DT> Eric Mehlhaff <I>(crl.com@mehlhaff)</I></DT>
+<dd> - Ultrix client
+</dd>
+<DT> Rick Nickel <I>(vox.trystero.com@rick)</I></DT>
+<dd> - FreeBSD client
+<br> - OS/2 Warp client
+</dd>
+<DT> Gary Parnes <I>(digibd.com@garyp)</I></DT>
+<dd> - Alpha client
+</dd>
+<DT> Sujal Patel <I>(wam.umd.edu@smpatel)</I></DT>
+<dd> - Client developer (sound servers for Linux, FreeBSD)
+</dd>
+<DT> Joe Rumsey <I>(netcom.com@ogre)</I></DT>
+<dd> - Amiga client
+</dd>
+
+</DL>
+
+</td></tr>
+</table>
+
+<HR>
+</BODY>
+</HTML>

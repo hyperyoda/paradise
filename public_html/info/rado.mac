@@ -1,0 +1,102 @@
+### Rado's macros
+
+# Aliases
+
+# any Planet/Star Pla +3 <near Sta,3-4:ARF>
+mac.P.T: ($tapi%?%n<0%{%! +%n/%?$tapA>0%{%?$tapA=1%{a%!A%}%}%?$tapM>0%{%?$tapM=1%{r%!R%?%2=1%{%?$tapM=2%{s%!S%}%}%}%}%?$tapD>0%{%?$tapD=1%{f%!F%}%}%})%?%2=1%{ ->[$tasi/$tap@]%}
+
+# my local pos
+mac.L.T: ($napi)%?%2=1%{ ->[$nasi/$s@]%}
+
+# target enemy
+mac.E.T: $thui
+
+# target friend
+mac.F.T: $ttui
+
+# myself + Stat
+mac.M.T: (%?%S=SB%{SBase%!%?%S=WB%{WBase%!%?%S=UT%{UtBase%!%?%S=JS%{JumpTAXI%!%S%}%}%}%}%?%a>0%{ +%a%})%?%d>90%{ DEAD%!%?%d>60%{%?%2=1%{ NoWarp!%! H--%}%!%?%d>30%{ H-%}%}%}%?%s<70%{ S-%?%s<40%{-%?%s<10%{-!%}%}%}%?%f<70%{ F-%?%f<40%{-%?%f<10%{-!%}%}%}%?%E=1%{ ETMP%!%?%e>33%{ E-%?%e>66%{-%?%e>99%{-!%}%}%}%}%?%W=1%{ WTMP%!%?%w>33%{ W-%?%w>66%{-%?%w>99%{-!%}%}%}%}%?%C=1%{ cloaked%}
+
+# bomb or not bomb
+mac.B.T: %?%n>4%{bomb & %}
+
+# stop Aliases
+
+# BE SURE you want to use these macros, i.e. you are pointing on the right target
+# fake or wrong messages hurt your team !
+
+mac. .T: |_| (~ |  |)   |) /\ (~ (~     |\ (~ ~|~   ~|~ /\ |) |) (~  |
+mac. .T: | | (_ |_ |    |) || _) (_ ,   |/ (_  |     |  \/ |\ |  _)  #
+mac. .T: PRESS "d" !!!!!!
+
+mac.^G.T: |/ | |  |    |) /\ (~ (~   |\ | /\ | | |  |
+mac.^G.T: |\ | |_ |_   |) || _) (_   | \| \/  V V   #
+
+mac.e.T: escorting %_F in %_M
+mac.e.%P: where to go ?
+
+mac.g.T: ogging %_E in %_M
+
+mac.h.T: help %_F @ %_P
+
+mac.r.T: KILL %_E @ %_P : %_M
+
+mac.^m: %m
+mac.^M.T: %m
+mac.^M.T: %m
+mac.^M.T: ****** IMPORTANT ******
+
+mac.t.T: %?%t=%T%{drop on%!%_Btake%} %_P
+
+mac.z.T: Kill Base: Sync with TEAM by %?%2=1%{WARP-PAUSE (hit ctrl "-")%!UNCLOAKING TOGETHER%}
+
+mac.^P: % $si Ping: %v av., %V stdv., %y%% loss
+mac.!.%P: !
+mac.^0: press "m" for message-mode, then "A" to send to ALL followed by text !
+mac.^0: or move mouse-cursor over message-window and press "A" then text !
+
+# MAY ERROR macros, no great irritation if wrongly directed
+
+mac.a.T: possible %_A
+
+mac.b.T: anti-bombing %_E @ %_P in %_M
+
+mac.d.%P: %_M
+
+mac.i.T: %_P
+
+mac.k.%G: %_M
+
+mac.I.T: anti-bombing @ %_L%?%a>0%{, to Beam Up dock on%! in%}
+mac.n.T: %?%S=UT%{%_I%!%?%S=SB%{%_I%!%?%S=JS%{waiting for job with%!give new orders for%}%}%} %_M : %_P next ?
+
+mac.o.T: Base Ogg in 20 secs ? %_M
+mac.o.T: when ready, send "NO armies" report ("F")
+
+mac.p.T: Do Not %_.: let it pop !
+
+mac.S.T: %_F: lock & tell when docked on %_M
+mac.s.T: %?%S=JS%{%_S%!%?%S=UT%{%_S%!helping %_F in %_M, currently @ %_L%}%}
+
+mac.v.T: who carries ? (hit "F" or "XF")
+
+mac.x.T: don't help $si %_M, I'm fine
+
+# FAST macros ! -> Singlemacros: activated with a single button
+# BEWARE that you hit the right button at the right time !
+
+mac.q.T: HELP $si
+mac.Q.T: %?%a>0%{%_q%!%?%S=SB%{%_q%!%?%d>10%{repairing%!%?%f<90%{refueling%!idle%}%}%}%} @ %_L : %_M
+mac.".T: %_E out of order
+mac...T: %?%n<0%{touch %!%?%n>4%{%?%t=%T%{pick%!bomb%} %}%}%_P
+mac.A.T: Carrier %_E%?%t=%T%{, Alert%} @ %_P
+mac.J.T: Cloaker @ %_P
+mac.H.T: %?%t=%T%{%?%n>4%{Save%!Defend%}%!%_BClear%} %_P%?%a>0%{ for %_M%}
+mac.G.T: %?%t=%T%{%_.%!%_t%} : guarding with %_M
+mac.W.T: Wait: clearing %_P, follow on call %_M
+mac.Y.T: %?%a>0%{%?%t=%T%{carrying to%!%?%n<0%{trying%!%?%n>4%{bombing & dropping on%!%?%a>%n%{taking%!%?%a=%n%{neuting%!reducing%}%}%}%}%}%!going to%} %_P with %_M
+mac.Z.T: %?%n>4%{%?%t=%T%{picking%!%?%S=AS%{don't bomb, %}bombing%}%!going to%} %_P with %_M
+
+singlemacro: Q".AGHJSWYZ
+# now assign those keys above to your keyboard mapping
+# with keyMap or cKeyMap

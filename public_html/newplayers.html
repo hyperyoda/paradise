@@ -1,0 +1,417 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <TITLE>New Player Information</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000099" LINK="#00ff00" VLINK="#c8c864">
+<H1>
+<I>New Player Information</I></H1>
+
+	So you've made the choice to play Paradise Netrek!
+	Congratulations, and welcome!
+<ol>
+<li> <h3>First Steps</H3>
+
+<oL>
+<li>
+<dl>
+<DT>
+	<em>Do you have a TCP/IP connection?</em></DT>
+<DD>
+	Chances are that if you're reading this document, the
+	answer is yes. Since the protocol to read Web pages
+	requires a TCP/IP link to the Internet, you probably have
+	TCP/IP. Paradise is TCP/IP based, so if you don't have a
+	TCP/IP link, you can't play. TCP/IP is just a fancy way of
+	saying that you're on the Internet, for you net
+	newbies.</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+	<em>Do you have X11 installed on your machine?</em></DT>
+
+<DD>
+	If you're using a Web browser like Netscape, you probably
+	have X11. As far as I know, most UNIX-based workstations
+	with graphics capability use X11. Simply put, X11 is a
+	graphics system found on many workstations. Windows or
+	Windows NT or a Mac is *NOT* X11. You need X11 to play
+	Paradise, due to it's graphical nature. (maybe changed
+	soon)</DD>
+</dl>
+
+<li>
+<dl>
+<DT>
+	<em>Do you have a supported architecture?</em> (currently not all listed here are supported)</DT>
+
+<DD>
+	This one is a tough question, especially if you are new to
+	computers or don't have access to the physical machine
+	itself. Take a look at this list and decide if you have a
+	machine and an operating system that matches one of these
+	combinations:</DD>
+
+<p>
+</p>
+
+<table border=1 align=center>
+<tr>
+<th>Machine Type</th>
+<th>Operating System</th>
+</tr>
+
+<tr>
+<td rowspan=8>intel-based PC</td>
+<td>BSDI 2.0 (*)</td>
+</tr>
+<tr>
+<td>FreeBSD</td>
+</tr>
+<tr>
+<td>Linux</td>
+</tr>
+<tr>
+<td>NetBSD (*)</td>
+</tr>
+<tr>
+<td>OS/2 Warp (*)</td>
+</tr>
+<tr>
+<td>Solaris (*)</td>
+</tr>
+<tr>
+<td>UnixWare 1.1 (*)</td>
+</tr>
+<tr>
+<td>Windows (*)</td>
+</tr>
+
+<tr>
+<td>RS/6000</td>
+<td>AIX 4.x (*)</td>
+</tr>
+
+<tr>
+<td rowspan=2>Silicon Graphics</td>
+<td>IRIX 4.0.x</td>
+</tr>
+<tr>
+<td>IRIX 5.x</td>
+</tr>
+
+<tr>
+<td rowspan=2>Sun</td>
+<td>SunOS 4.1.x (*)</td>
+</tr>
+<tr>
+<td>Solaris >= 7</td>
+</tr>
+
+</table>
+<br>
+
+(*) -- The client is currently NOT under development.
+<br>
+	First the general client changes have to be done, then we
+	can try to port. If you want to support something not
+	mentioned here, get the source, succeed in building a
+	running client and announce on the paradise-workers
+	mailing-list, how the source must be modified to succeed
+	as you did.
+
+</dl>
+</ol>
+
+<ol>
+<p>
+Examples:</p>
+
+<li>
+	Joe Trekker has an Alpha running OSF/1 sitting on his
+	desk. He checks the machine type list, and finds 'Alpha'
+	in the list. He scans over to the right of the word
+	'Alpha', and finds 'OSF/1'. Both match, so he can play.
+
+<li>
+	Gnarl E. Dude has a Pentium-based PC sitting on his desk.
+	He scans down the machine type list and finds 'intel-based
+	PC' in the list. Now, Gnarl knows that he is running Linux
+	He scans the OS list to the right of PC and finds 'Linux';
+	he's ecstatic. There is a binary for him to use.
+
+<li>
+	Imnotta Realuser has a 386sx-based PC sitting on his desk
+	that runs Windows 3.1. He finds 'intel-based PC' in the
+	machine type list and thinks "Great! There's hope yet!".
+	But, after looking at the OS column and finding that
+	Windows isn't supported yet, he's crestfallen. There's no
+	binary for Windows! Poor guy can't play.
+
+<li>
+	Mac User has a Macintosh Plus sitting on his desk. He
+	looks at the machine type list in a pitiful attempt to
+	find Macintosh listed there, but to no avail. 68k
+	Macintoshes aren't supported, so he can't play. He'll just
+	have to get a Power Mac and run MkLinux.
+
+</ol>
+<p>
+If you've answered YES! to all 3 questions, then you can play! See the
+next section for how to obtain a trek program (called a 'client' or a 'binary'
+from here on in this document).
+</p>
+
+
+<li>
+<A NAME="GETCLIENT"></A><H3>Client Naming Conventions</H3>
+<p>
+	You've answered YES! to the above three questions! Great!
+	You can get a client and play! But the next question, of
+	course, is how on earth do you get a client? </p>
+
+<P>
+	First, you've got to know a little bit about the naming
+	conventions us Paradise hackers use. It's a little
+	convoluted, but it helps us keep track of what stage we're
+	at while we're coding it. </p>
+
+<P>
+The naming convention for binaries follows this form:
+<BR>
+<strong>&lt;type-version-machine-OS[.dynamic]&gt;</strong>
+</p>
+
+<P>
+	Now, the <strong>&lt;type&gt;</strong> is either
+	<big>tedturner</big> or <big>paradise</big> (dying out
+	since everything has grown into <big>tedturner</big>).
+<br>
+	However, the other things you'll need to worry about:
+</p>
+
+<p>
+	<strong>&lt;machine-OS&gt;</strong>: Since we have (had ;)
+	so many binaries for so many different machines, naming
+	the clients with the machine or OS name in them is a
+	logical solution to an otherwise difficult naming problem.
+	Here is a table of translations: </p>
+
+<table align=center border=1>
+<tr>
+<th>Machine,OS</th><th>Name</th>
+</tr>
+<tr>
+<td rowspan=3>PC, Linux </td><td>intel-Linux-X11R5</td>
+</tr>
+<tr>
+	<td>intel-Linux-X11R6, a.out or ELF</td>
+</tr>
+<tr>
+	<td>intel-Linux-term</td>
+</tr>
+<tr>
+<td>PC, FreeBSD </td><td>intel-FreeBSD</td>
+</tr>
+<tr>
+<td>PC, Unixware </td><td>intel-Unixware</td>
+</tr>
+<tr>
+<td>PC, Solaris </td><td>intel-Solaris</td>
+</tr>
+<tr>
+<td rowspan=2>SGI, IRIX </td><td>SGI-IRIX4</td>
+</tr>
+<tr>
+	<td>SGI-IRIX5</td>
+</tr>
+<tr>
+<td>RS/6000, AIX </td><td>RS6000-AIX</td>
+</tr>
+<tr>
+<td>Sun, SunOS 4 </td><td>Sparc-SunOS</td>
+</tr>
+<tr>
+<td>Sun, Solaris 2 </td><td>Sparc-Solaris</td>
+</tr>
+
+</table>
+
+<p>
+	<em>[.dynamic]</em>: For some operating systems
+	that undergo many revisions, we post two versions of the
+	client: a static and a dynamic version. Static versions of
+	the client have the required libraries linked right into
+	them and are usually bigger. Dynamic versions of the
+	client don't have the required libraries linked into them
+	and are usually smaller, but require that you have at
+	least the library version of the developer. If you don't,
+	a typical error message is 'Shared library &lt;blah blah
+	blah&gt; is older than expected', but the client could
+	still possibly run. </p>
+
+<P>
+	If you don't want to worry about all of this semi-arcane
+	stuff, pick out the static client; it will work on every
+	system, no matter what the library version is. The dynamic
+	client will save you some disk space, but as of this
+	writing, clients are typically less than 3MB in size. </p>
+
+<P>
+	Current systems that have two sets of binaries are Linux,
+	FreeBSD, SunOS 4, and Solaris 2. </p>
+
+<li>
+<H3>Getting a Client</H3>
+<p>
+Alright, you've survived the THREE QUESTIONS and you've learned about the
+huge naming convention those wild'n'crazy Paradise hackers have created
+for you. Now you can get a client?
+</p>
+
+<P>Clicking on the following URL will let you use your Web browser to fetch
+a client:
+<BR><A
+HREF="http://www.netrek.org/pub/paradise/">http://www.netrek.org/pub/paradise/</A>
+</p>
+<P>Or, you can use anonymous ftp. Here is an example anonymous ftp session
+(assuming you want to get the ELF Linux client). Examples of what you would
+type are emphasized:
+
+<PRE>$ <b>ftp ftp.netrek.org</b>
+Connected to hi-rad1.
+220 hi-rad1 FTP server (UNIX(r) System V Release 4.0) ready.
+Name (ftp.netrek.org:guest): <b>anonymous</b>
+331 Guest login ok, send ident as password.
+Password: <b>your eMail-addr</b>
+230 Guest login ok, access restrictions apply.
+ftp> <b>cd pub/netrek/paradise/client/bin</b>
+250 CWD command successful.
+ftp> <b>ls -lF</b>
+200 PORT command successful.
+150 ASCII data connection for /bin/ls (132.239.41.33,32920) (0 bytes).
+Expired/
+RCS/
+TedTurner/
+current/
+machines
+TedTurner-1.3.1-Alpha-OSF1v3.2.gz@
+TedTurner-1.3.1-Amiga-AmiTCP.lha@
+TedTurner-1.3.1-Amiga-DNet.lha@
+TedTurner-1.3.1-HP700-800-HPUX.gz@
+TedTurner-1.3.1-PowerMac-MKLinux-X11R6
+TedTurner-1.3.1-RS6K-AIX-v3.2.gz@
+TedTurner-1.3.1-RS6K-AIX-v4.1.gz@
+TedTurner-1.3.1-SGI-IRIX5.gz@
+TedTurner-1.3.1-Sparc-Solaris-X11R6-dynamic.gz@
+TedTurner-1.3.1-Sparc-Solaris-dynamic.gz@
+TedTurner-1.3.1-Sparc-SunOS-dynamic.gz@
+TedTurner-1.3.1-Sparc-SunOS.gz@
+TedTurner-1.3.1-intel-BSDI-2.0.gz@
+TedTurner-1.3.1-intel-FreeBSD-dynamic.gz@
+TedTurner-1.3.1-intel-FreeBSD.gz@
+TedTurner-1.3.1-intel-Linux-X11R5-dynamic.gz@
+TedTurner-1.3.1-intel-Linux-X11R5.gz@
+TedTurner-1.3.1-intel-Linux-X11R6-ELF-dynamic.gz@
+TedTurner-1.3.1-intel-Linux-X11R6-ELF.gz@
+TedTurner-1.3.1-intel-NetBSD-dynamic.gz@
+TedTurner-1.3.1-intel-Unixware-v2.0.gz@
+TedTurner-1.3.1-macintosh-ppc.sea.bin
+pnetrek.alpha.i486-win32.zip
+226 ASCII Transfer complete.
+remote: -lF
+769 bytes received in 0.064 seconds (12 Kbytes/s)
+ftp> <b>get TedTurner-1.3.1-intel-Linux-X11R6-ELF.dynamic.gz</b>
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'TedTurner-1.3.1-intel-Linux-X11R6-ELF.dynamic.gz' (181494 bytes).
+226 Transfer complete.
+181494 bytes received in 22 seconds (8.1 Kbytes/s)
+ftp> <b>quit</b>
+221 Goodbye.
+$</PRE>
+
+<li>
+<H3><A NAME="PROBLEMS"></A>Possible Problems / Q and A</H3>
+
+<ul>
+<li>
+<p>
+	Q. When I type netrek, it tells me Command not found even
+	when I'm in the directory it is in. What's wrong?
+<BR>A.
+	It's probably not been made executable. At the command
+	line type <PRE>chmod 755 netrek</PRE> (netrek is the name
+	of the client binary). This should make it executable.
+	Also, some sites don't put . into the path. In this case,
+	type <PRE>./netrek</PRE> on the command line (again,
+	netrek is the name of the client binary) to execute it.
+	</p>
+
+<li>
+<P>
+	Q. I got a binary, but it says something about lib*.so:
+	expected version x, found version y?
+<BR>A. You need a
+	static binary. Get the -static client. See the explanation
+	on the difference between
+<A HREF="#GETCLIENT">static and dynamic</A> binaries. </p>
+
+<li>
+<P>
+	Q. The client says 'Can't connect to metaserver.' What's
+	wrong?
+<BR>A. Either the metaserver is down, or your
+	machine isn't doing name lookups right, or your machine
+	isn't connected to the Internet, or you're behind a
+	firewall that restricts outgoing packets. If the
+	metaserver is down or your machine isn't doing name
+	lookups right, there's still hope. If not, you're out of
+	luck. </p>
+
+	<P>If there's still hope, try this command:
+<PRE>$ <A HREF="telnet://metaserver.us.netrek.org:3521">telnet metaserver.us.netrek.org 3521</A> | grep 'P$'</PRE>
+<br>
+	This command should list all Paradise servers. If it
+	doesn't, the metaserver is down. In this case, you'll have
+	to use the -h option to netrek to specify a host; e.g.
+	<PRE>$ netrek.paradise -h paradise-lost.kulua.org</PRE>
+	will connect you to paradise-lost. </p>
+
+<li>
+<p>
+	Q. I can play for awhile, but then the client unexpectedly
+	quits. Why?
+<BR>A. Well, barring a server or a client bug,
+	odds are you failed the cluecheck. To get a clue, see the
+	section on reading messages and the cluecheck in the
+<A HREF="primer.html">Primer</A>. </p>
+
+<li>
+<p>
+	Q. There are soooo few Paradise players logged in, how can
+	I find some to play with ?
+
+<br>
+	A. Either you wait a long time until somebody else joins
+	you (bad, can take very long), or you join the
+
+<a href="develop.html#NEWSLISTS"><b>Paradise games mailing-list</b></a>
+	and request a game to happen--best with time and place
+	at which you like it to happen. </p>
+
+</ul>
+
+<P>
+	If you have a question that you want answered, send your
+	question to Rado <I>(users.sourceforge.net@rado)</I>.
+	He'll answer your question and put it on the
+<A HREF="info/FAQ.html">Frequently Asked Questions</A> web
+	page. </p>
+
+</ol>
+
+<HR>
+</BODY>
+</HTML>

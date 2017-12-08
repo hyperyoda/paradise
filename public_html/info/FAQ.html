@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Paradise Netrek FAQ</title>
+</head>
+
+<body text="#ffffff" bgcolor="#000000" link="#00ff00" vlink="#c8c864">
+
+<h1>Frequently Asked Questions</h1>
+
+	Do you have a question that you can't find the answer for
+	here? Send eMail to the Editor, whose address you can
+	find on the starting page, and he will add your question
+	and answer to this doc.
+
+<p>
+	The worst that can happen is that he'll give you an
+	answer, write it down for everyone else's benefit, and
+	publicly thank you. What do you have to lose?
+</p>
+
+<dl compact>
+
+<dt><b>Q</b>
+	<dd> Is there an easy way to determine a planets/ship's
+	location?
+
+<dt><b>A</b>
+	<dd> For a ship? Not always.
+<p>
+	If they used the <tt>F</tt> key to distress then you will
+	get a sector number and a planet in their message. The
+	first number in the sector is an x coordinate, the second
+	is a y coordinate. Sectors are numbered from 1 to 6 in a
+	left-to-right or top-to-bottom order. If you have "Draw
+	galactic map grid" enabled in your Options window, you
+	should be able to locate the person quickly using this
+	method. </p>
+
+<p>
+	Once you have the grid you should be able to locate their
+	ship position indicators (`K3', `Ra'). This assumes they
+	aren't under a dogpile. You can still warp to that sector
+	and impulse to them. </p>
+
+<p>
+	For a planet?  Not trivial, but fairly easy.
+</p>
+
+<p>
+	Use `P' to bring up the planet list window. Search for the
+	name of the planet alphabetically and then look at its
+	entry in the sctr column. This is the sector the planet is
+	in. Remember that planets on the galactic have the
+	`Planet' or `New' prefix removed. </p>
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> Is there an easy way to determine the source of
+	armies for your team?
+
+<dt><b>A</b>
+	<dd> Yes.
+<p>
+	Press `B' until you get some planet bitmaps on your
+	galactic that look like this:<br>
+
+	<img src="../images/galactic-facilities.gif"><br>
+
+	Anything with a little man on the left has extra armies
+	which you can beam up and use to beat up on enemy planets.
+	Actually, you can beam one extra army off after the man
+	disappears, but that's an advanced tactic.
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> Do the "gurus" remap their keyboards so they can
+	phaser and torp easier?
+
+<dt><b>A</b>
+	<dd> Yes. Most ``gurus'' do rearrange their keyboards.
+	Most of them don't even use the mouse to fire.
+
+<p>
+	Here's my (Editor: Brazilian's ?) keymap. I don't
+	claim it's the best, but it works for me.
+</p>
+
+<pre>
+# completely remaps the asdf area
+#
+# cloak   beamup  maximp  plasma  switchspec        warwin
+#  shield  course  phaser  torp    afterburners      dock
+#  halfimp  beamdn  bomb   detmine  pressor           refit
+#         ---------------- det ---------------------------------------
+#
+keymap:		qcwze%rftCywauskdpftg`Hez#xxcbvDbynr d
+# new mouse bindings, left-to-right
+#         tractor-on  T/P-off  pressor-on
+buttonmap:	1_2$3^
+</pre>
+     
+<p></p>
+
+<dt><b>Q</b>
+	<dd> How come everybody locks on me and phasers me even
+	before I can get my cloaking device turned off?
+
+<dt><b>A</b>
+	<dd> They are good, lucky, or both. Hit &lt;TAB&gt; to
+	toggle your galactic between normal-sized and zoomed. The
+	zoomed view makes it easier to phaser enemies. Remember
+	that the cloaked position you see is inaccurate.
+
+<p>
+	They could also be using missiles as indicators, since
+	they are homing on normal servers. </p>
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> What are some good macros to have?
+
+<dt><b>A</b>
+	<dd> Here's a couple of macro I (Editor: again, Brazilian ?) use:
+
+<pre>
+macro.f.T: $tapUn %?2=$tapA%{AGRI%!    %}      %2%{near $tasn in $tap@%!is targeT%}
+macro.y.T: $thui is going to die
+macro.Y.T: $thui is crippled near $tapn, get him if you can.
+macro.h.T: Somebody kill $thui near $tapn NOW
+</pre>
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> Who are the best players so I can observe them to see
+	what they do?
+
+<dt><b>A</b>
+	<dd> Rank is a good first guess at who's a good player.
+	Anybody who's made Midshipman probably has their act
+	together.
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> How do I increase my rank?
+
+<dt><b>A</b>
+	<dd> Uh,
+
+<p> Crush, kill, destroy! </p>
+<p>
+	Seriously, bombing and taking planets are fairly
+	important. If you just play hard, you should get enough
+	rank to fly bases in a few weeks. Any rank beyond that is
+	scumming territory and you'd have to read the <u>rank
+	system document</u> (Editor: which hasn't been written
+	yet) to figure out what you're missing. </p>
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> Whats a jumpship and utility ship do?
+
+<dt><b>A</b>
+	<dd> A jumpship is a big engine with docking ports. It is
+	designed for hauling ships around the universe REAL fast.
+	A good jumpship pilot can SERIOUSLY augment the taking
+	power of a skilled carrier. This power is increased if a
+	dedicated escort comes along.
+
+<p>
+	A utility ship is a <b>very</b> lightweight base. It can
+	carry armies without having to get kills, but can not
+	orbit planets. It can refuel ships that are docked to it.
+	PTs can enter the game docked to the UT (for a finite
+	number of times, then the UT needs to refit). </p>
+
+<p></p>
+
+<dt><b>Q</b>
+	<dd> ... fighters as weapons. How do you get em,
+
+<dt><b>A</b>
+	<dd> You don't normally. Fighters were an experiment
+	started at Eden. We decided they needed a little more work
+	than we could currently dedicate to them before they
+	became a balanced part of the game.
+
+<p>
+	On servers where carriers (CV) are allowed, you can beam
+	up armies and deploy 8 fighters for each army (max. 8 at
+	once) as a replacement for torps. Those fighters are
+	server controled in that they seek out the nearest (to
+	mouse or own ship ?) enemy ship and deliver a single torp.
+	Those torps are well aimed, but the fighters don't possess
+	great maneuveribility. They are most useful on long ranged
+	targets.
+
+<br>
+	It's hard to defend against fighters, but it's possible:
+	either you det a lot (but eventually you die), or you have
+	to hit the small fighters with a phaser. Whenever a unit
+	of 8 is incomplete, the CV loses an army. </p>
+
+</dl>
+
+<hr>
+
+</body>
+</html>

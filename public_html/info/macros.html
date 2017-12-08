@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>Writing Macros for Paradise</title>
+</head>
+
+<body text="#ffffff" bgcolor="#000000" link="#00ff00" vlink="#c8c864">
+
+<h1>Writing Macros for Paradise</h1>
+
+A macro is placed in the .paradiserc or .xtrekrc and defined as follows:
+<pre>
+         macro.k.d: value
+</pre>
+
+  The word ``macro'' or ``mac'' identifies this as a macro definition.
+The ``k'' is the key it is bound to.  The ``d'' is the destination.
+
+<h2>Specifying the Destination</h2>
+
+  Normal destinations are 0-9a-z for a player, FRKO for a team, T for
+your own team, A for all, or G for god.
+
+<p>
+
+  The destination can also be a % code.
+
+<dl compact>
+
+<dt>  %I  %C
+<dd>	Send to self.
+
+<dt>  %U  %P
+<dd>	Send to player nearest mouse
+
+<dt>  %T  %Z
+<dd>	Send to team of player nearest mouse
+
+<dt>  %G
+<dd>	Send to friendly player nearest your ship
+<dt>  %H
+<dd>	Send to enemy player nearest your ship
+</dl>
+
+  If the destination field is not provided, executing the macro will
+go into a state where it asks for the destination, at which point you
+should select one of the normal destinations.
+
+<p>
+
+  When the macro is used the value from its definition is transmitted
+as a message.  This value is formatted in a printf-like manner:
+
+<h2>Percent Codes (taken from BRM)</h2>
+
+  The following % codes are valid in the value string.  If the
+uppercase version of a code is used, then the result is completely
+uppercased.
+
+<dl compact>
+
+<dt>  %a
+<dd>	armies carried by sender
+<dt>  %d
+<dd>	sender damage percentage
+<dt>  %s
+<dd>	sender shield percentage
+<dt>  %f
+<dd>	sender fuel percentage
+<dt>  %w
+<dd>	sender wtemp percentage
+<dt>  %e
+<dd>	sender etemp percentage
+<dt>  %T
+<dd>	team letter of sender
+<dt>  %o  %O
+<dd>    sender's 3-letter team id
+<dt>  %c
+<dd>	player number of sender
+<dt>  %E
+<dd>	Boolean: true if etemped
+<dt>  %W
+<dd>	Boolean: true if wtemped
+<dt>  %S
+<dd>	sender ship type
+<dt>  %i  %I
+<dd>	full sender name
+<p>
+<dt>  %r
+<dd>    team letter of target player
+<dt>  %t
+<dd>	team letter of target planet
+<dt>  %p
+<dd>	number of target player
+<dt>  %g
+<dd>	number of friendly target player
+<dt>  %h
+<dd>	number of enemy target player
+<dt>  %n
+<dd>	armies on target planet
+<dt>  %l  %L
+<dd>	3-letter abbreviation of target planet
+<dt>  %u  %U
+<dd>	full target player name
+<dt>  %z  %Z
+<dd>	3-letter team id of target planet
+<p>
+<dt>  %P
+<dd>	number of player nearest your ship
+<dt>  %G
+<dd>	number of nearest friendly player
+<dt>  %H
+<dd>	number of nearest enemy player
+<dt>  %b  %B	
+<dd>	3-letter abbreviation of nearest planet
+<p>
+<dt>  %v
+<dd>	average ping round trip time
+<dt>  %V
+<dd>	standard deviation of ping time
+<dt>  %y
+<dd>	packet loss
+<dt>  %m  %M
+<dd>	last message
+<dt>  %&lt;<i>space</i>&gt;
+<dd>    A literal space.  Enables you to start macros with spaces.
+<dt>  %%
+<dd>	a literal %
+<dt>  %?
+<dd>	start a test
+<dt>  %{
+<dd>	conditional
+<dt>  %*
+<dd>    abort macro and don't send.
+<dt>  %2
+<dd>    is 0 on normaltrek servers, 1 on paradise servers.
+<dt>  %_<i>k</i>
+<dd>    calls another macro bound to key <i>k</i>.  Good if you have
+complicated sequences you reuse.
+</dl>
+
+  tests are funny
+
+<pre>
+        %?lhs [=<>%] rhs
+</pre>
+
+  lhs and rhs can be specials (the percentages are good for this, as
+are the booleans)
+
+<p>
+
+  conditionals use a boolean
+
+<pre>
+        %E%{text %! text %}
+</pre>
+
+<h2> Dollar Codes (new to Paradise)</h2>
+
+  Dollar codes are multi-character codes that begin with a $ and are
+substituted similarly to % codes.  They are not meant to replace %
+codes, they're designed to augment them.
+
+
+<h3> field 1:</h3>
+   (<b>n</b>)earest <br>
+   (<b>t</b>)arget <br>
+   (<b>s</b>)elf	(doesn't have fields 2 and 3) <br>
+   (<b>_</b>) substitutes ``Paradise netrek $ codes are orthogonal and make sense.'' Has no other fields. <br>
+
+<h3> field 2:</h3>
+   (<b>a</b>)ny		<br>
+   (<b>t</b>)eammate		<br>
+   (<b>f</b>)riendly		<br>
+   (<b>h</b>)ostile		<br>
+
+<h3>    field 3:</h3>
+   (<b>a</b>)ny		<br>
+   (<b>u</b>)ser		<br>
+   (<b>p</b>)lanet (includes asteroids)		<br>
+   (<b>s</b>)tar		<br>
+   (<b>n</b>)ebula		<br>
+   (<b>b</b>)lack hole		<br>
+   (<b>^</b>) non-planet		<br>
+   (<b>*</b>) any stellar object		<br>
+
+<h3>    field 4: (optional)</h3>
+   (<b>U</b>)ppercase		<br>
+   (<b>C</b>)apitalize		<br>
+   (<b>L</b>)owercase		<br>
+
+<h3>    field 5:</h3>
+   full (<b>n</b>)ame (Hammor, Thought)		<br>
+   (<b>i</b>)dentifier (e.g. R5, Ka, Can, Sco)		<br>
+   (<b>#</b>) number (0-9a-z for players, %d for planets)		<br>
+   (<b>t</b>)eam name (Romulan)		<br>
+   (<b>s</b>)hort team id (ROM)		<br>
+   (<b>l</b>)etter of team (R)		<br>
+   (<b>a</b>)rmies		<br>
+   (<b>@</b>) sector		<br>
+   (<b>A</b>)rable, 0=not arable, 1=arable but not AGRI, 2=AGRI		<br>
+   (<b>M</b>)etal, 0, 1, 2(repair), or 3(sy)		<br>
+   (<b>D</b>)ilithium, 0, 1 or 2(fuel)		<br>
+
+<h2>Examples</h2>
+
+<pre>
+macro.t.T: Good escort by %u (%T%g)!
+macro.f.T: $tapUn %?2=$tapA%{AGRI%!    %}      %2%{near $tasn in $tap@%!is targeT%}
+macro.y.T: $thui is going to die
+macro.h.T: Somebody kill $thui near $tapn NOW
+macro.3.%H: Listen, $nhun, I'm afraid I'm going to have to kill you.
+macro.P.T: $tapn, orbiting $tasn has %n armies, is {%?$tapD=2%{FUEL %}%?$tapM=2%{RPR %}%?$tapM=3%{SY %}%?$tapA=2%{AGRI%}}
+macro.w.T: Please clear  %L@%n.  I have %a troops.
+macro.t.T:Reccomend $tapn%?%2%{, $tasn system,%} for next take.
+mac.J.T: All ABOARD! JS leaving for %L@%n, $tasi system!
+</pre>
+
+<p>
+	You can use the <code>singleMacro</code> option in the .xtrekrc-file to invoke
+	macros with a single keystrike instead of going via your
+	macro-invocation key (X). But pay attention not to
+	override some of the vital key functions which you want to
+	use and/or remap, since then the <code>singlemacro</code>
+	<strong>becomes</strong> the function for that key.
+</p>
+
+	Good:
+<pre>
+	mac.G.A: Just an example
+	mac.H.T: ... another
+	mac.J.A: still interested ?
+
+	singlemacro: GHJ
+</pre>
+	because the keys G,H,J have no vital initial function.
+<p>
+	Bad:
+</p>
+<pre>
+	singlemacro: sct
+</pre>
+
+	because now you can't toggle shields, cloak or fire torps. :(
+<p>
+	You can remap singlemacroed keys to more suitable ones,
+	once you've found keys to fill with singlemacros without
+	disturbing your vital functionality. You can either have a
+	look at the source, to find out what keys aren't used
+	(yet ;), or trust Rado and pick from this list:
+	<code>AGHJ".SWYZ</code>
+</p>
+
+<ul>
+<li>
+<a href="rado.mac">Rado's Macros</a>
+</ul>
+
+(Editor: send me your macros)
+
+<hr>
+
+</body>
+</html>
